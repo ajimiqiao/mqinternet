@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://www.baidu.com/ -->
+<html class="sui-componentWrap">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="always" name="referrer">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description"
+          content="MQ的网页">
+    <link rel="shortcut icon" href="MQ.png" type="image/x-icon">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://www.baidu.com/content-search.xml"
+          title="MQ搜索">
+    <link rel="icon" sizes="any" mask="" href="web.png.png">
+    <link rel="apple-touch-icon-precomposed"
+          href="web.png">
+    <title>MQ:搜索网站</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            height: 100vh;
+            background-image: linear-gradient(60deg,
+            #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad, #fedb00, #548af7);
+            background-size: 2000%;
+            text-align: center;
+            animation: bgmove 120s infinite;
+        }
+        @keyframes bgmove {
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+
+        .webimg {
+            width: 65px;
+            height: 50px;
+            margin-right: 10px;
+            top: 10px;
+            transform: translate(0,10px);
+        }
+        .titletext {
+            font-size: 100px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+        .s_ipt {
+            background: transparent;
+            border-radius: 20px;
+            font-size: 40px;
+            border: none;
+            width: 1000px;
+            height: 70px;
+            color: #eee;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(4px);
+            box-shadow: inset 1px 1px 6px rgba(255, 255, 255, 0.3),
+            2px 2px 15px rgba(0, 0, 0, 0.5);
+            animation: am3 ease-out 1s 0.2s backwards;
+            transition: all 0.3s;
+        }
+
+        .s_ipt:hover {
+            box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.9),
+            4px 4px 25px rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(7px);
+        }
+        .btn {
+            border: none;
+            width: 200px;
+            height: 70px;
+            margin-top: 10px;
+            border-radius: 20px;
+            color: #eee;
+            font-size: 28px;
+            font-weight: bold;
+            margin-left: 10px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 2px 10px #111;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            width: 250px;
+            border-radius: 20px;
+            margin-left: 5px;
+            box-shadow: 0px 0px 10px #999, inset 0px 0px 5px #333;
+        }
+    </style>
+    <script type="application/json" id="topmenuloc-data" data-for="result-data">
+        {
+            "aiIcon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAC+lBMVEUAAABqnP9kj\/96af96af9Cov96af96av8\/p\/9Ziv86qv97af9qfP9JoP9pf\/9Gqf8+pv83rf9Im\/83rP96aP94bP9Xjv84rP9sef9nf\/83r\/9\/c\/83rf9wdP9Im\/96aP9gg\/9QlP9xcv9ApP96af97af9biP83rf9Gnv9Apv94bf9InP9Uj\/9kf\/96af9sdf9Qlf91bv9DpP9Skv9Wkv9cif93cP86sf9pef92bf9oe\/93bf97aP9jgv83rP89p\/85rP9Vjv9nfP84rf\/\/\/\/8pMuHc3P96aP\/P6f\/a3v\/Z4P\/R5\/\/V5P\/N7f\/O7P\/P6\/\/W4f\/T5v\/V4\/\/U5f\/M7\/\/Y4f86qP\/6+f\/R6v\/X4\/85qv\/b3\/\/j4\/89pv9Cof93a\/9Ao\/\/6\/f84q\/9Jmv9sd\/\/R6f\/T6P9fhP9jf\/\/9\/\/88p\/9TkP8\/pP9Ll\/9Qkv9Vjv9udP9ycP82rP9Fnf9HnP9OlP9Ziv9hgv9lff9pef9Xi\/9chv9wcv\/8\/f\/i8f\/l5f9En\/9Nlv9ne\/90bv91bf\/X8f\/1+v9biP+GkvLb8v\/x8P9wee729f\/w9f\/Q4\/\/z+f\/r+P\/q6v+3wPqorvePofRJU+fr9f\/n6P+WzP\/G1P2tu\/qUmvSCi\/FhautOWOg7ROUtNuIpMuLd3f\/c1\/\/N0\/6jsPebpvaXoPV5g+9TXelBS+Y1PuQxOuP1\/P\/g9f\/m8v\/q7\/\/f7f\/g6P\/a5f\/Z4f\/Q3f\/Tzf+zqv9\/bv\/NzP7Hxf6+0Py5xvuJjvJvfe5nc+1eZ+ssNeLl9\/\/s7P\/n6\/\/L5f\/V3\/\/b2\/+02f+cw\/97w\/\/IwP9fuP9UsP9Grf98mv9kmf95if+GeP\/I2v62uvyMlfN+ifFXYurQ8f\/n5f\/X5f\/V1v+iu\/9wu\/93uv9nuf+Etf+vs\/+Erf+Wpv+uov9Lof9xnf+Jmf+YmP+dkP9oif9xfP+81f7D0PyuxPmerPa94P+f1f+Sr\/8\/q\/+Cpf9epP+goP+ilf9XlP+Zi\/+Hi\/+0y\/t8gO9seO0TTIgyAAAARHRSTlMABw3x\/LOxi1\/r5F1CLyMY7+7u1cxycGpqWT4W+vDi4NbU0dC8oJCOinkx+fLv6rqwlW5eRjs6J\/nn5uHczMK8ubl5Ts8VVsgAAAfnSURBVFjDnZh1cJNBEMWDu7u7u7snkLRIIBQS3N1dW6yFQmmhxd3d3d3d3d3dZYZ9e3fJ91ESCu+vZDr5ze673b3bGjwpXsyc0bKkT5wnT+L0mQrmLBLP8D9KUDhawiZNmgzp2bNXr5YtO3ce2rt3l7wFkyf4N0qkmBU6dWrWjDhDFAegLh07dq1UJFKEMZFzxW7cmEBOTkvFIVDXAbGSR44YJ0XCDh0aN0Y8SIw5nTWcAX36xEoeAUzqJA3qEYcTe3hzypFg30khIZPWBr84eu+L5IwcOTBjsb+Zk6NBPck5OaVNc6NOzevcOMOggQPbts3u0aoSSRqIeDrdMhv\/pPYb7wlO277l4ntIKxFxADrma3Srde8A6tu3Xb647jgx07Zgzm27M4CQcasC\/f39AwNXjwtob5Synm7bl0Dt+qX6M6cKcSixDlMGS0v2+deoUaNmzVo1a5lrmc1me+Ak+ZfB04hDoGEp\/5hX2h5I7NQbI2tlYN0a4BCoVi2z3W42tzZ7t\/GV\/i94Rpx+w\/r\/IaYSiXogsRO+IppVdevWVRwzRCBv7zbebVYL1LqzxBnWv2Q4nxLEZs7NALZmX10XhwMijreZON61a9dezWaNfUwB9W+V7rezi5SkRwsCnWBOc3\/FIQl7zK1bMwayreWg6j8GqFVmfT3l6IGATo5jd64wh8ThAIO8FMhms60P4JjOEqdVt0I6o8FpcIr9GccUlz\/gAEQChlS9evWxRlKj58TpNqi4BpQEnPd2xXH5IzHeKh5gSHXqMGlBq24Eyqzpd07sLefFGJ3PJA5HJkYYkoOzu0CcQd2TOedPIgR0YjB8viLDIX9cAcEgUDggBlkd6+H44G\/E6Z5OzadcfGL+OHd\/FY8yiOuQJcKRHKvDsQ5VUJU4w4erkGKjNY4h1H2\/cUQ9K39kPBunOqwOq4\/PGvziE4FGlIokehUGdfBFYlqOWfoDjIYTenmvafZiq4\/VugHJ+RFnRNM4DCrvDAh9ocIB5tUE1sJgaTNpxwoTFObj4+V1AL95MnxE06ZZuTlgUL2DODHps7Jnl0lqabDz3GeZWDO9oPr0o+sjCBQ1Dc4enJOAu\/od9tinmZxaaIOIM3WuRINjmYzzOde0abVqsLsihtkU4ZBu\/lx2gXZxPACZhPYA1LAhKmYzQNEJlIhAje2oaf38eWVyaZmqH5XaGHAsltH0s\/kARaH7HQGdAtpfP39mmjR6qQpox0T+Pt2rIXEsfpgCW6qRchtS8JRGsvq++D5XC1os4qE6PBS6aNGiMItQQxTlU4DiGHLg1oBFIfr5s9uk1W4CAUP1Q+fO\/gBUNQgmARTDEA2gI7BIN3+272XAcnl0s7lRrVYqaIUBpypMOk4ccjsL7sODqEbX\/HHV0AzbMvFhB\/qLOF4LLy2ZMQ0UBo2H2wAlNfDDwxdVpJ0\/L+aYoBXnbT8F6CISo764hC9zFzOGBLevApTBkBAPj0k4NO38WWJiLaltWyQLx8EBbVjO32aBAzWiH+4HKL+BHwwBAGnmz3nRUXOm2myylpcfsvqQPwsEdiI4ChQEUFQDv8xCANLMn0uyoFGGE8XnaXxeoTI+PQgyJAQIqQW65s9BkcDe7QDJLGfwcYXJwgZEeTQanCiG2HhRrQXINX9GyeLhvlgo29QK0GJJVSC0rR9AZQ1Z8FT0pu++zmsneLaJz2YH98XGOcKvjQDNEKDpkqM9\/mgAoSAnme1yPk+QM0e211LxNQyFOEZ+ViAU5DZRkDnx5ESLBNjl\/RUsazCUOQ6rjGKJl6WhRXbyBQWq72qRmHi63jKS7PI6lT5cRkBW0jR55GgMOUW2Ss48NO1X0bTxhhDoYXOYJO8Led7LxkCvqd9XCMsWUBXOFsd5WHNog3mM0KMkMZaE2ngUCM5rk1ZzqJz3iI+LCCSMn621CF5jsBmi4XF\/FOjWfH8hepeWEuiiLB6LZav4NEtlNlhZhFFbGEvCRyNyw\/W13aRTGNVzqMzVYpGfZjqriHSOLcJ1xEtLMKZ\/m3CgiTx\/yBnoetVt4sMPdWYqM7qOkBtAdzgkXIPa0bgi1AuaLqDUX3z8y7cpq9WgzSqubN5++MrGPRi8cJTS9JdWMQ8vXNy5c\/oC+u3hMPqgDj9IDiNkBkVKj+2HQ1pNJDnm5fwBR41DJW0RPRBTTSgX1rEu50FaK+8vpujnczhNdt5FydRDKzHWsTMBSO6a8\/3D88dDQFxEm7iInItgcl7rjiKkkGvEQVoIx308KrPPAGUzOJWJ19X1\/Oh1IB68f8ABxA2okbM9NK\/\/ogw6s4ZjcpA8BuQ6fD\/ZHi5l53X1ET96A\/j+YrnDQOOVRUl1K0SmrthXHwXwcrDOR+TliQOQumS1ih+L994P9Y3Q6A2a+92N9itQIYNO8WLx\/nx6jVizDnjOy5UaDk2vYnl5f3421ciqv8ZDPKoe58lG06soBYS990ZzudCO9WvoAYRTGy9u69+VSi7ip1FQghU0ev9kv0Z\/VBC\/RMVr7XfFjUUc7L33DxgjpgfiBgmn+BnBwd573xIhkOq1cIqUHRzee8\/exevXo\/CAcBMSpZdRcLBmPn9yd9vh8aOD6rvVVgZFxRIZPqiU+QQI6yG2KCwbTat5VFI3\/4iqXJoDwnoIzghwPCuNu\/\/+pCogObxF\/RUU1cP\/gNKkLJAugomhSzwrd8oY0TOXiRL1L5gMMSigX5gXyTqSTkXWAAAAAElFTkSuQmCC5XaGHAsltH0s\/kARaH7HQGdAtpfP39mmjR6qQpox0T+Pt2rIXEsfpgCW6qRchtS8JRGsvq++D5XC1os4qE6PBS6aNGiMItQQxTlU4DiGHLg1oBFIfr5s9uk1W4CAUP1Q+fO\/gBUNQgmARTDEA2gI7BIN3+272XAcnl0s7lRrVYqaIUBpypMOk4ccjsL7sODqEbX\/HHV0AzbMvFhB\/qLOF4LLy2ZMQ0UBo2H2wAlNfDDwxdVpJ0\/L+aYoBXnbT8F6CISo764hC9zFzOGBLevApTBkBAPj0k4NO38WWJiLaltWyQLx8EBbVjO32aBAzWiH+4HKL+BHwwBAGnmz3nRUXOm2myylpcfsvqQPwsEdiI4ChQEUFQDv8xCANLMn0uyoFGGE8XnaXxeoTI+PQgyJAQIqQW65s9BkcDe7QDJLGfwcYXJwgZEeTQanCiG2HhRrQXINX9GyeLhvlgo29QK0GJJVSC0rR9AZQ1Z8FT0pu++zmsneLaJz2YH98XGOcKvjQDNEKDpkqM9\/mgAoSAnme1yPk+QM0e211LxNQyFOEZ+ViAU5DZRkDnx5ESLBNjl\/RUsazCUOQ6rjGKJl6WhRXbyBQWq72qRmHi63jKS7PI6lT5cRkBW0jR55GgMOUW2Ss48NO1X0bTxhhDoYXOYJO8Led7LxkCvqd9XCMsWUBXOFsd5WHNog3mM0KMkMZaE2ngUCM5rk1ZzqJz3iI+LCCSMn621CF5jsBmi4XF\/FOjWfH8hepeWEuiiLB6LZav4NEtlNlhZhFFbGEvCRyNyw\/W13aRTGNVzqMzVYpGfZjqriHSOLcJ1xEtLMKZ\/m3CgiTx\/yBnoetVt4sMPdWYqM7qOkBtAdzgkXIPa0bgi1AuaLqDUX3z8y7cpq9WgzSqubN5++MrGPRi8cJTS9JdWMQ8vXNy5c\/oC+u3hMPqgDj9IDiNkBkVKj+2HQ1pNJDnm5fwBR41DJW0RPRBTTSgX1rEu50FaK+8vpujnczhNdt5FydRDKzHWsTMBSO6a8\/3D88dDQFxEm7iInItgcl7rjiKkkGvEQVoIx308KrPPAGUzOJWJ19X1\/Oh1IB68f8ABxA2okbM9NK\/\/ogw6s4ZjcpA8BuQ6fD\/ZHi5l53X1ET96A\/j+YrnDQOOVRUl1K0SmrthXHwXwcrDOR+TliQOQumS1ih+L994P9Y3Q6A2a+92N9itQIYNO8WLx\/nx6jVizDnjOy5UaDk2vYnl5f3421ciqv8ZDPKoe58lG06soBYS990ZzudCO9WvoAYRTGy9u69+VSi7ip1FQghU0ev9kv0Z\/VBC\/RMVr7XfFjUUc7L33DxgjpgfiBgmn+BnBwd573xIhkOq1cIqUHRzee8\/exevXo\/CAcBMSpZdRcLBmPn9yd9vh8aOD6rvVVgZFxRIZPqiU+QQI6yG2KCwbTat5VFI3\/4iqXJoDwnoIzghwPCuNu\/\/+pCogObxF\/RUU1cP\/gNKkLJAugomhSzwrd8oY0TOXiRL1L5gMMSigX5gXyTqSTkXWAAAAAElFTkSuQmCC",
+            "aiText": "AI伙伴即将升级为文心一言",
+            "bubbleUserStatus": "1",
+            "color": "#5382fb",
+            "exposeNum": "5000",
+            "exposeTime": "7000",
+            "fixedBubble": "0",
+            "hoverColor": "#315efb",
+            "isAiEntry": "1",
+            "isBubble": "1",
+            "isClickedClose": "1",
+            "isPassText": "0",
+            "skinColor": "rgba(255,255,255,0.85)",
+            "skinHoverColor": "#ffffff"
+        }</script>
+    <script type="application/json" id="underbox-tips-data" data-for="result-data">
+        {
+            "isBdWordLinkRecallFromGuide": "",
+            "bdWordLinkGuideShowUrl": "",
+            "bdWordLinkGuideClickUrl": ""
+        }</script>
+    <script type="application/json" id="top-right-operate-data" data-for="result-data">
+        ""</script>
+    <script type="text/javascript">"use strict";
+
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function")
+        }
+    }
+
+    function _defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor)
+        }
+    }
+
+    function _createClass(Constructor, protoProps, staticProps) {
+        if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) _defineProperties(Constructor, staticProps);
+        return Constructor
+    }
+
+    function _defineProperty(obj, key, value) {
+        if (key in obj) {
+            Object.defineProperty(obj, key, {value: value, enumerable: true, configurable: true, writable: true})
+        } else {
+            obj[key] = value
+        }
+        return obj
+    }
+
+    (function () {
+        var config = {
+            sample: {jsnotfound: .02, imgError: .02, jserror: .02},
+            logServer: "https://sp1.baidu.com/5b1ZeDe5KgQFm2e88IuM_a/mwb2.gif"
+        };
+        var imgErrorLen = 0
+        ;
+
+        function alwaysMonitor(info) {
+            if (bds.comm.alwaysMonitor === "1") {
+                info.alwaysMonitor = 1;
+                return true
+            }
+            return false
+        }
+
+        var LocalCache = function () {
+            function LocalCache() {
+                _classCallCheck(this, LocalCache);
+                _defineProperty(this, "lsName", "pcSpyLocalCache");
+                _defineProperty(this, "tmpList", []);
+                _defineProperty(this, "timer", null)
+            }
+
+            _createClass(LocalCache, [{
+                key: "addLog", value: function addLog(info) {
+                    var _this = this;
+                    var infoStr = JSON.stringify(info);
+                    this.tmpList.push(infoStr);
+                    if (this.timer) {
+                        clearTimeout(this.timer)
+                    }
+                    this.timer = setTimeout(function () {
+                        _this.save()
+                    }, 500)
+                }
+            }, {
+                key: "getData", value: function getData(cb) {
+                    try {
+                        var storageStr = localStorage.getItem(this.lsName);
+                        if (storageStr) {
+                            cb(storageStr)
+                        } else {
+                            cb("")
+                        }
+                    } catch (e) {
+                        console.error(e);
+                        cb("")
+                    }
+                }
+            }, {
+                key: "save", value: function save() {
+                    var _this2 = this;
+                    this.getData(function (str) {
+                        var content = str + "\n" + _this2.tmpList.join("\n");
+                        try {
+                            localStorage.setItem(_this2.lsName, content)
+                        } catch (error) {
+                        }
+                    })
+                }
+            }], [{
+                key: "getInstance", value: function getInstance() {
+                    if (!this.instance) {
+                        this.instance = new LocalCache
+                    }
+                    return this.instance
+                }
+            }]);
+            return LocalCache
+        }();
+        _defineProperty(LocalCache, "instance", void 0);
+
+        function shouldSend(sample) {
+            if (!sample) {
+                return false
+            }
+            var hitCookie = document.cookie.indexOf("webbtest=1") > -1;
+            return hitCookie || Math.random() < sample
+        }
+
+        function send(obj) {
+            var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "except";
+            var lid = bds.comm.qid || bds.comm.queryId;
+            var time = Date.now();
+            var spyCache = LocalCache.getInstance();
+            spyCache.addLog({
+                from: "result",
+                info: obj.info, lid: lid, group: obj.group, ts: time, url: location.href
+            });
+            if (!shouldSend(config.sample[obj.group]) && !alwaysMonitor(obj.info)) {
+                return ""
+            }
+            var pid = "1_87";
+            if (bds.comm.ishome) {
+                pid = "1_79"
+            }
+            var logUrl = config.logServer + "?pid=" + pid + "&lid=" + lid + "&ts=" + time + "&type=" + type + "&group=" + obj.group + "&info=" + encodeURIComponent(JSON.stringify(obj.info)) + "&dim=" + encodeURIComponent(JSON.stringify(obj.dim || {}));
+            var img = new Image;
+            img.src = logUrl;
+            return logUrl
+        }
+
+        function filterError(msg, stack) {
+            if (stack.indexOf(
+                "chrome-extension://") > -1 || stack.indexOf("moz-extension://") > -1) {
+                return false
+            }
+            return true
+        }
+
+        function jsError(event, info) {
+            var obj = {info: info, dim: {}, group: "jserror"};
+            var error = event.error || {};
+            var errorStack = error.stack || "";
+            if (event.message && filterError(event.message, errorStack)) {
+                obj.info.msg = event.message;
+                obj.info.file = event.filename;
+                obj.info.ln = event.lineno;
+                obj.info.col = event.colno;
+                obj.info.stack = errorStack.split("\n").slice(0, 3).join("\n");
+                send(obj)
+            }
+        }
+
+        function getPathTo(element) {
+            var _element$parentNode;
+            if (element.id !== "") {
+                return 'id("'.concat(element.id, '")')
+            }
+            if (element === document.body) {
+                return element.tagName
+            }
+            var ix = 0;
+            var siblings = (element === null || element === void 0 ? void 0 : (_element$parentNode = element.parentNode) === null || _element$parentNode === void 0 ? void 0 : _element$parentNode.childNodes) ? element.parentNode.childNodes : [];
+            for (var i = 0; i < siblings.length; i++) {
+                var sibling = siblings[i];
+                if (sibling === element) {
+                    return getPathTo(sibling.parentNode) + "/" + element.tagName + "[" + (ix + 1) + "]"
+                }
+                if (sibling.nodeType === 1 && sibling.tagName === element.tagName) {
+                    ix++
+                }
+            }
+            return ""
+        }
+
+        function getLocation(href) {
+            var ele = document.createElement("a");
+            ele.href = href;
+            return ele
+        }
+
+        function getUrlHost(url) {
+            var host = getLocation(url).hostname;
+            if (!/\.baidu|bcebos|bdstatic|baidubce|bdimg\.com/.test(host)) {
+                return "other"
+            }
+            return host
+        }
+
+        function imgError(target, info) {
+            var imgSrc = target.getAttribute("src") || "";
+            info.msg = imgSrc;
+            info.errLen = ++imgErrorLen;
+            info.xpath = getPathTo(target);
+            send({
+                info: info, dim: {
+                    host: getUrlHost(imgSrc)
+                }, group: "imgError"
+            }, "et_comm")
+        }
+
+        function sourceError(event, from) {
+            try {
+                var obj = {info: {}, dim: {}, group: ""};
+                var info = obj.info;
+                var target = event.target;
+                var dataConnection = navigator.connection || {};
+                info.downlink = dataConnection.downlink;
+                info.effectiveType = dataConnection.effectiveType;
+                info.rtt = dataConnection.rtt;
+                info.deviceMemory = navigator.deviceMemory || 0;
+                info.hardwareConcurrency = navigator.hardwareConcurrency || 0;
+                info.saveData = !!dataConnection.saveData;
+                if (target && target.nodeName && target.nodeName.toLowerCase(
+                ) === "img") {
+                    imgError(target, info);
+                    return
+                }
+                var localName = target.localName || "";
+                var errorLink = target.src || "";
+                if (localName && localName === "script") {
+                    obj.group = "jsnotfound";
+                    info.msg = errorLink;
+                    info.file = errorLink;
+                    send(obj);
+                    return
+                }
+                if (target === window || from === "onerror") {
+                    jsError(event, info)
+                }
+            } catch (e) {
+            }
+        }
+
+        window.addEventListener && window.addEventListener("error", sourceError, true)
+    })();</script>
+    <script>
+        this.globalThis || (this.globalThis = this);
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=http://www.baidu.com/baidu.html?from=noscript"/>
+    </noscript>
+    <script data-require-id="tslib" src="./百度一下，你就知道_files/tslib-c95383af0c.js.下载" async=""></script>
+    <script data-require-id="plugins/bzPopper" src="./百度一下，你就知道_files/bzPopper_d8249c4.js.下载"
+            async=""></script>
+    <script data-require-id="plugins/swfobject" src="./百度一下，你就知道_files/swfobject_0178953.js.下载"
+            async=""></script>
+    <script data-require-id="soutu/js/tu" src="./百度一下，你就知道_files/tu_ba0fbe3.js.下载" async=""></script>
+    <script data-require-id="@baidu/guarantee-popper" src="./百度一下，你就知道_files/guarantee-popper_b82f233.js.下载"
+            async=""></script>
+    <script data-require-id="@baidu/search-sug" src="./百度一下，你就知道_files/search-sug_947981a.js.下载"
+            async=""></script>
+    <script data-require-id="superman-san/app/hot-news/result_978c198"
+            src="./百度一下，你就知道_files/result_978c198.js.下载" async=""></script>
+    <script data-require-id="superman-san/app/news/result_95ac399"
+            src="./百度一下，你就知道_files/result_95ac399.js.下载" async=""></script>
+    <script data-require-id="superman-san/app/video/result_8e74c35"
+            src="./百度一下，你就知道_files/result_8e74c35.js.下载" async=""></script>
+
+    <link rel="stylesheet" href="./百度一下，你就知道_files/ubase-89d6b96e41.css">
+    <script type="text/javascript" src="./百度一下，你就知道_files/index-20deaf7968.js.下载" defer="defer"></script>
+    <script type="text/javascript" src="./百度一下，你就知道_files/mancard-ca8bfaa734.js.下载" defer="defer"></script>
+    <script type="text/javascript" src="./百度一下，你就知道_files/subscribe-d2630c5b22.js.下载" defer="defer"></script>
+    <script data-require-id="@baidu/pc-tts-player" src="./百度一下，你就知道_files/pc-tts-player_4205f55.js.下载"
+            async=""></script>
+
+    <script data-require-id="superman/components/login_guide"
+            src="./百度一下，你就知道_files/login_guide-4fba3971ce.js.下载" async=""></script>
+    <script data-require-id="superman/components/placeholder"
+            src="./百度一下，你就知道_files/placeholder-f3bc3565f2.js.下载" async=""></script>
+    <script data-require-id="superman/components/video-meet"
+            src="./百度一下，你就知道_files/video-meet-7833028d86.js.下载" async=""></script>
+    <script data-require-id="superman/components/content-info"
+            src="./百度一下，你就知道_files/content-info-12dbf9fb6d.js.下载" async=""></script>
+    <script data-require-id="superman/components/csaitab-log"
+            src="./百度一下，你就知道_files/csaitab-log-75d5350518.js.下载" async=""></script>
+    <script data-require-id="superman/components/top-right-operate/operate"
+            src="./百度一下，你就知道_files/operate-b7693b0cc7.js.下载" async=""></script>
+    <script data-require-id="superman/components/aging-tools"
+            src="./百度一下，你就知道_files/aging-tools-13270120c7.js.下载" async=""></script>
+    <script data-require-id="superman/components/invoke" src="./百度一下，你就知道_files/invoke-97e9694cb9.js.下载"
+            async=""></script>
+    <script data-require-id="@baidu/video-meeting" src="./百度一下，你就知道_files/video-meeting-1be7f62dac.js.下载"
+            async=""></script>
+    <script data-require-id="superman/components/guide_tips"
+            src="./百度一下，你就知道_files/guide_tips-d9e617f782.js.下载" async=""></script>
+    <script data-require-id="@baidu/aging-tools-pc" src="./百度一下，你就知道_files/aging-tools-pc-1e5afe8bdf.js.下载"
+            async=""></script>
+
+</head>
+<body class="cos-pc   open-homepage-tts s-manhattan-index" ssr="n" style=""><a id="aging-total-page"
+                                                                               role="pagedescription"
+                                                                               aria-label="欢迎进入 百度一下，你就知道，盲人用户进入读屏幕模式请按快捷键Ctrl加Alt加R；阅读详细操作说明请按快捷键Ctrl加Alt加问号键。"
+                                                                               tabindex="0"
+                                                                               href="javascript:void(0)"></a>
+<script>
+    if (navigator.userAgent.indexOf('Edge') > -1) {
+        var body = document.querySelector('body');
+        body.className += ' browser-edge';
+    }
+</script>
+
+
+<div id="wrapper" class="wrapper_new">
+    <p class="titletext">MQ搜索</p>
+    <div class="s-skin-container s-isindex-wrap skin-gray-event"></div>
+    <div id="head" class="">
+        <div id="s_top_wrap" class="s-top-wrap s-isindex-wrap ">
+            <div class="s-top-nav"></div>
+            <div class="s-center-box"></div>
+        </div>
+        <div class="clear"></div>
+        <div id="head_wrapper" class="s-isindex-wrap head_wrapper s-title-img ">
+            <link rel="stylesheet" href="./百度一下，你就知道_files/soutu_new2_e1a824c.css" type="text/css"
+                  data-for="result">
+            <div id="s_fm" class="s_form s_form_login ">
+                <div class="s_form_wrapper  soutu-env-nomac soutu-env-newindex" id="s_form_wrapper">
+                    </div>
+                    <form name="f" id="form" action="https://www.baidu.com/s" class="fm  has-soutu"
+                          onsubmit="javascript:F.call(&#39;ps/sug&#39;,&#39;pssubmit&#39;);"><img class="webimg" src="web.png"><span id="s_kw_wrap"
+                                                                                                   class="bg s_ipt_wr new-pmd quickdelete-wrap"><span
+                            class="soutu-btn"></span><input type="text" class="s_ipt" name="wd" id="kw" maxlength="100"
+                                                            autocomplete="off"><i class="quickdelete-line"></i></span><input type="hidden"
+                                                                                                          name="rsv_spt"
+                                                                                                          value="1"><input
+                            type="hidden" name="rsv_iqid" value="0xa9d14de4006f0cfc"><input type="hidden" name="issp"
+                                                                                            value="1"><input
+                            type="hidden" name="f" value="8"><input type="hidden" name="rsv_bp" value="1"><input
+                            type="hidden" name="rsv_idx" value="2"><input type="hidden" name="ie" value="utf-8"><input
+                            type="hidden" name="rqlang" value=""><input type="hidden" name="tn"
+                                                                        value="baiduhome_pg"><input type="hidden"
+                                                                                                    name="ch"
+                                                                                                    value=""><span
+                            class="btn_wr s_btn_wr bg" id="s_btn_wr"><button type="submit" value="搜索" id="su"
+                                                                            class="btn self-btn bg s_btn">搜索</span>
+                    </div>
+                </div>
+            </div>
+            <p class="s-skin-lm s-isindex-wrap"></p></div>
+
+            <textarea id="s_sync_data" style="display:none;"></textarea></div>
+        <script type="application/json" id="promote_login_box">
+            []
+        </script>
+        <div id="bottom_space" class="s-bottom-space"></div>
+        <div id="homepage_tts_player" style="display: none;">
+            <div class="_2lMH_" style="max-width: 100%;">
+                <div class="_29hoo" style="bottom: 48px;left: 1104px;">
+                    <div class="DGD48">
+                        <div class="_1Zy0R">
+                            <div class="_1Uq60">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABMCAYAAADHl1ErAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAATKADAAQAAAABAAAATAAAAAAWucfgAAAbL0lEQVR4Ab2bW5Ndx1XH+1zmohlJI8mSovhaNjFx4sQklQovhBQPEIoqqvgEeeRbwQsfAaogVVDFAwUUISE4wQlOMLHsJJZjybqNNCPNufD/rUt373POyCbEtHR2d697r1593XtGf/oXh8vRqBT7FRWU7AnMao6LYs0qfRAlrQkS53i8LEX/Ez6CQcmeeiRchF5eLjvcqJarwiis8htlyFvFIQR8qB6IShg8fRki6jLdbEj5YxBKY8OAtfZFwTQb3rmiuJotjXmVxKFq/zCt1hO7Eb4RaBw9xs0MRwubuMyNoW9L6lzJkz7zHm2tEWIRQOveJHTZKxoS2UuhbPA0eRVJfUVOVI1Njya2lUxK4NLQTZKBwVU513qn4wp5HWS92NGY3Co4SZ0Ap2WkWfsqXRRqPfn63ByQMdYQAa49UjEmbLNEg6741/g2wapAL8DbYqwhU13mDRMlQ/ROH1KgOkgG8sdpU99JSZgiVusG3whMJa0JlSwVpdDMg4C5ImmdVM/eqKQnT0IVnbYB1ljWAC7IOBqbAfsqbMh2WAuMFmEup5LU6imFKjwKtS56mzQF6GHDSq+mUXnjm58aZmhEwsmz3AqNtuKEPMVvRtzonDfryeN1l1EdVo1dnXuQkRJc3hOfI6NNhpSaIlp9IFaWwbHs0A7pABu0Jta0uWKnSvXBs1KtkkxnIC3TI6o1bwXYlprDpBVPmjeTGlSUO1BV9KSC0a/wepVnK5mMoKOcRcvTEz3CGLqHCJPHyLqKFbs6hFStnZ2IjcWOrysaKXWLsNx3uAAnS5szP124x0LFiwF5yWfSUnNXSVBtiQmwXU+0DgBUldIo8pGiEuv1ZssADpO8lTwpo+Yg9Ks8lKNiWdQJYt+HwQmwk2DlDtZwlajSj0L6Kk8jcJ5NMppnHbtKkzKb1lbqhzBQlpp+ZDbKLIX0FSV9dVBeIada57BqeMom7yKlB6+WeyWGM8Ci+mtAb61sHLUUBaIzU8Ul4JQ86YghyrUehR4Gdlh3oQbr6FNVDuPk4QBTfTUIQwQLGTKS/5RcrVwj9OG1jDBItOedV6rEbG6HCyZvYiVsBfApuEEVZY0j22Ro0dYNj5U7piyGvA1ijaJFWDJ0efa2MZ8iwQ1aR/quahO8U0BRJJUqy+n/zI2uUg0ErELdVZuHptGaweHQVWY3Zzh/mW7ZGLTmsOQLWWsRlxYmXdb7PPs0aVyWQxchEZxDhqUqR0yOiSjzSqB771UOL4gO0kwbbUmk8mx8iu95K1kAkwY4fDXCMLGtlmEwRFBmGlQSmHnjqRBAvcZA+LBwenuKporO1hhtha4ftVIJKkJ1UpPjNKI8YUne6kHlWaJrbmA90pwkqw5rYQVRpyg4YCBl7jV/OknDtBLzo0/+de4wFiicqqd1VOhW7yUP8r3xa9RhwLBhDgTmQxOuZV43UOZXRbm+Vk/uzXlzWOBTTnSaDM3SZgEDaDBXDuorvW/0wFNRJ6CCOusTVvMsdHyDYuCTDHdgAlGI2E6025CE0FDu6im35xungMwhanwbuFPKai5So8485DiZzA640QxwoQ9ERbYoc/4OB1HSVaQXrA04JuBIocyIiX6rHOZEcECEh4aaPwGuJ0gGEVaFdlxW5JGpLydMuYPTxKw7IuUma+Yde23QKi4bBm3iMu/5s5y4zJOPxro7lFs5OVruPI70csNlaeCwJMrciVotS5mnkGGe7mnQOhtpXPS8T+zPRcx9mst6ic6vZy+oqXI4uA0ko9Bv6I6/FoPH6vLqJsdO0QUi91y2UgZjb2hvkxm7AdnkoNKdY2RugSlhcFS3hR5zjcoLo4PThY9G2pCoSG2smzt61+wzYySJiclJDZIPE7OCyuiyyczOT7Ii9Yk2inG0ErXJRQc4WRR65DBIh42zhqf2IFx1knMlUZeLmbcqsA1YpXnhVpQFCK1aMzwk2rM7o3Jxv5RLe6Ny4cyo7E7cKha2e0el3D1eltsPSzl8XMpcQKFjMnH3U11LGKgUKqst1nzhKhx7hU2HBJs7TnZ6vTFYhCG4Nk4FyjgNoQ4PocA7WhU3J5jFWY2CSiDbYuAoVXcno/LSlXH57LVxef7CWE4rZVvWuD4YXBd8c/2O5KwbD5blx+8vy/WbOI+7KTlPhzvrnp7RuNdtxSpPIsZGeSk7N6pJ4O1sDGYYXqgOA2c6XY4xVJiJaU6L6rB1oSp5MgdMmQcN35KjXr02Kl95flKevuDDjEDT27bqLOixhR9lsZS97VI+sysnXxyVWw+X5Yc3RuVH7y3L/UdqhKLXLvasAWLokjlC9b7zaAmJ4ZaRRd36GXjIcaq0w2vhMPVSCyd4LaWAtZYkXvkGGwPbiDCQoXT1YFK+/hlF1dVx4WVCGjQT7ua9ZXn/cFnuKIoey7PAdmXd/u64XNFwvXJuXM4pCuG7vD8qX3uplN+4XMq3r4/K2zcX6oylD9VsbWcFenDOqrHpOBC0w+mCsGsYEJCAptYDKlUg5UDKZjuSrPWE4CYPJiso75LLFFKdwIQOyeeuTcoffH5SDhQlyIX19oNS3nhvVn6kYfbB/UV5zFhVgp52u/i5Rd/BmXF58fKovPbstDx73iPy6fOj8o1XSnn95+Pyb+/I0TNFG/cvpzlNcrENBeiwRF2aDByKsc/v+Nrc5lRyGAVPISmrCBUoHZoqkmo1T7bM4XNnjcoXnx2Xb3xuWnakDb6Hj0r513dm5XvvLMpdDS+G43Q6Kjtb0iK98S7cyhjP8nmoif97csqbN07k/FH56ovTclWRtyeerzwnXq0E/3y9lMea2051mpTjkz5hDwm4tTUrQWkOBh+M5rDmFHlaUWHIkATOR2sCxBnMQDaFOjrB0fBXnx6XP5Sztlj5BPz5nUX51o/m5d1b8zLV5LSz7fp8ULhhfFaQ6/aU3p+MNdyWRb4pJ/Lgv/9sUd69fVK+9plJ+bwWjS214gtPi0eO/6e3RKNIE0u1U6Wa0mbaZEZGc4B78pL7xK0weBB0EdYzBGEKEzH0+X2ECYO8d1yyd/nzT43L778yLdtyFpHy5geL8jc/mJV7iqqdLRxV3WSdFOIGnRBroHtSRmxpyC01kbHN+Fs5/s5xKb/9wthW2FeujsoDove65kwZOcHAFNrZZW05pW44HiQa2smgRj9YMpyV1r0KDuI8bwWZ8/EMvAH0YNU7p7nq935zYtsFnPX2rUX5y9dPyv2jpW8fwllLwiJahQ6Szyhe9roBgwwnjyxiH89L+Zefzst3rkuDmFkkvvB0KS+po1iRV+U0icIZPuRmOQhURZz97AleDIym6rCgNbLVTmGINoc65Wo9pFskTcXwlRcm5TltGzD8pla/v/6PWTlSNEzZdUpr6qB7MK6/ZESDyQcRyYp6YIsxq8B2YyanffedeXnjhg/Dc9oEv/asOkwrKiuzd3JKWc+rChXQST1hrew28tzgsGAMrmzYuqpOciCJLDx2+dyofOmZiUXasVa+v//xrLx/b2FzDaQ5EI3NrNTyIF5fTw3qKFMehkQzqKXPKOG0B9rUfuftWblxn31eKZ86qz2bti7ypctNTzTRgxIy85eFWg9cMgwchtzV1IPMISJo/nbqpCFnxfstrYr0MPT/9ctF+c/35loh3fUWISbDeXlWmOhxWsqz1hqZQ+xpNM7r0SanqXrr4UiLwdwijvnx5SulnA8b4LOfCXDe054DElWML4gpDxzWhDibPzuoADjBm95JUdFo9TjQWfDlT2lNU/nhybJ89/rceQZMTaaVRDtWaNIRGWkmD7lZCK1W1aOCRYPjFjLs+oeL8rM7miPlwYtnSnn+ElOCE9dOptozr5hCFXSwOa2LMEq2eYPUhHVUQYFhhq9MbgZo51uW5y+OzVjmrndl/Lsf+vYBmvRZ0lYxwQ8eXMJrbgUeDskqucvUIFfh8HhUfqKV2E4J2oM8p2OUbWdER2rczW7HfIynmLGNk8aTk2sZ0LDqtYQkN2Yiq5/XbhyhJ5pAfvL+XMccjwDom6hgGMBoPBQeZdxseA1OQSuzF6zJKiaYdswVZb+4q80wi4uMuLRX7CaEUWEpcsskMGUE9tQM+vytRRhcvXG2wVsRBb4aoWbiQI4SZ3RAvnp2XI7lpAcaju9+yK47o8CFwGs/q2JGazTwdBOYXAScamhXUuqesToNuvu6Dnpf51I2rpwCLurciSORTcrcK847gBni9IfNYWlQT1aFCNnj6Ulw+QuVRrOnXfu+9l8MidvanN47WmgRwGBf/pHDj7o1FDmhNHOqON8cZ3gfA4mno5B/ojHPMNzdclq2F9hEfush86GvmAdnOmeFLrI1+wWosFTW0WexHr4T0OfwueGyzO02QzCUhAJLqlPe0x5oIgfRqHs6+z3SloLhebA/Ll/WyvnCJd9QvvXBvHxfx5sjRSH3WblMIi5Em0D7vFvAhRTSswyhuRyyp9XvtWfG5dVPT7RZVcdoCP7gFwtd+egAL2cSZejmovKMnShwBmdWDHVbUw86SV53Cwymh8GS0Mna4dtJA5pZB8Qh6ShkgFoIyLzFmKRPtzUEMJLoOdQRhRXqxSuT8sdf5KDsgw0rXnxKNw4XFuWvvj+zSOETddubCdepFAwXoUwIbbN5t8i92Fe1Kf6dl2xwyIaRVmbtvc6PyzMHo/IPb83Lfe3LHomWc/HOBMMRgmzk8B8HOszOwobTw+jCloFuocIw1xrMLmL4dMFOkGSZQ0k0UUegOtMSQ+6RIuHZC5PyJ1+a6j5rZIdmhhJDhsTG8jVFne/GkRGChEOeJSn3CHdnQfNpXel8SdGF3uQl31L0cIvxuy9Pbf7ikI6fCSreJSKTKLNcUvNcHJoGmVMlSBzJp3wwhyHsScnviBpFKpUcM04jzI5C+ORgT7cUn98ql2JOa1ym33boX9RNBgsF/KRN+umIMQ8REcwvXB6XfQ3J5HFO7zhWxs9eLeXLz/kpg62NLi7Mua7AK+k4EyiZglZ0eNTkA89fUq2tkskcMqogvG4h3RFIl+NNrKJKQ4FtBEPn5SvaYmjjSFSdli4o8rhJzQXAjApPpKGWh84tde81DbvTEmTbctqzB2wrZIvmB45mTB0hQhQqUQ+YnWHVEzbqO+eZDpjil/w+JIEnxChPe7jiJCWn1y3SVOHGk0mZtK+bg9Ob5nwc0nlbRIMsKaPk1YCBAC5hZ3S8OtDCkuTGs+FBQG6rZUuN22OFvdEjA1E8SBSip9x5DH4fqujKZDxUVIDFPtkESEphWXdoPCtQhVp2HpMv2KFeSBzrxpMDMb+ObCAqK8wv3C4MProLJoOpnDJoFBeF3HY8IWiNnk4kEpjH7uk6yeZZGpey0wByg4PzqHPZRJyE6Ken/dIO+qFnr7Uh1EmQHSXJrxU3UmKP5Ky72gOxaUTRRyYRsQ3piV0qT6JZOQ2hpseIA7z+d6pPVYHYRyfaD8phlGEMicaDY1yLVV0oghV1NoQpQpOOQ4Z+3jQhYbbUlxPW5ZUOA1rFhD+WgT/T0YT546OS2SaipdF2goANqtZaG5LIpBFEzJMSHNA80N6C292RXVI2DutsZMTPMh6RbHFjIpYh0OJA5jp+bdLvrewEpZCaV8G1YCh6cS4L3tPNKlsKeuNJCW6mEDyA6l49fAnzqIBAQC17tMPYqJ+WsEUeu6UjElEPM/9MRsfjGNAurOkMogoQPua7QSwYPmk7wavFkC+wzHBd7iC15Jd6XfbB3bnNYat8fZ0IoMce56TcI7uyyRct/p/JYey5cFiq7UhbUcj72v2/rese+H1IOg8R4zYjwaUw2XspRKgCjf2gSqQKcpj5XuDNIZG0IapmVQgCEyoROOD1d3WRV4GJbHlGCFuOe1ooPiolBVuEIw17xudpTqMVj9Ub79zWi2GmB1afLqUss98qPBxqzrRaUlVUdWD9oK7K7GhNjuo9qNIhyxBOQJn5kZyz4lu6lzptLoOGBs8VMbf1ptv4esEbymKxSZyVmLLr3kAoENH1xi/mFo1Q+PyjHEYphtdkqGplKkDMt1ZRLfQ4BgJLPuWKxskcmMYAS3jmTtE9DZFYX4Yfat74ux+elDtaoez94Ao51AyDO5qQb2oI56qaUjryQZFj1Q29GyBBaw6wmj9sZVRo//A93bzedrlgTK56ZVeXAOevTS03jk5hc1wyGEVU3H2clyPCOk4XP+jB3oEpJvPGGSV1ARtHLvK+9cbMXv/3kUYjU96bN+b2FU6NsMCFpFRhOZ2PwT9V5PLlDvWeDmfx+dSPf7ks39YLEfD1vacUTri2vjwpl/XF0MFTemMpo7goSBk1V4GyO1CO0vAfy8AtbWn2dsb68CWYaKSHJKo8VRDVqAxgSScgcpJoJGEo/MHPdRuhgPijV3VboTdJwHhzfDLXVbKc9T19LmAGpJzIsYXddrMkEUTYvLz+9rh8/bMTu7u3DbLoubDk04N//O+ZHdFwUCbbJsiOxxrO2zrbnsjhC00H3HRgN3p8lxYckjdSD/Dpwpa+QdjSrQJXQ5wcRt/883uwqTE+l7iAztQQiCh3iisI0YPM8c6bqxGTPy9GXntmWp7jPkwc129yH6brayH5/Ml0pnD0hNQOZBCJstWdw/gLipJXdHjfVaTc0Wb5TYahopo5xiJaBT5VgCflTaRrrB6bcb6Uw7xBrj8V4OhdRdKuPn6ZcP2i/wvRz7VCnejKavTNP9NmJSWKi/stV9JUVcPhD3DHYrryUWkx1uJayoRk/gFnfHrQKHb51O1iDwGJp6xktFHIMiIZ1id6sDUymaqP1VCueJoOlz2QKbpB5EooQ05gDVndFu/pQlIRiKOYKU90GzmTk9iQs0CRGCE5kqzIho93i6CrkYZRHYXAyYVMfKAto0HuNCIWIt3rC4ODGi4aJrTASibVM6vrIVxAu4LLll/KDrLlpKRxncYWj4aDhmTmeNGf8goLzo4+Fd0/qw9m5Cg2xsc6IRzr1namEUC9b6gueLMuA1AvqdmwiqsF15PVzB3ansnfTA5jUdEl6Jh46YBsMDJJSZo6oAUI3HBBEBkslozMhOghpNniHNbJ1kRR0uHbGnr75ydlR8MPGx7JUUf6Zu1E8yFRbDatKLAIQ75NjIZkCUWXU1KzMsBMKUSwjxNpSHOZLiDZMQo4EUPL0mlGL4TR6VF5gx6E4dKelRx6Ek6A0OswwyU9Uri/rw9l9EUkQ5Fvyo758lGLAjaRmi1ezyefX1WhqcDEVsZmmoFUHeDFHiJSZs2td02zKGSs0YnZ5KA2RGf0pKB0r9HpAZ3xpi5VrO3IqNrWC8bDQ9zesZoedAt5/kB7Mb0OZLg9PCSq/Mi1LmEd4kMyrXHZ0RIpyR6RxR5p6FZZVqahHvLegIT1anL1xWi4elXQwQOMV/3sd6oMKwSPsnQaPAblkeXK5LD+GWQWbbu61Ty4NClTvQ480Vuth/c9qpKm5zut3IakKMwQGhXDI/dThsHiTE6YtZqfAvZ5JB2Aw/XPXCNYGssCQdl1Cxs9kS62FReuMKPXlRHaWVhtosAqzFx1/qKaK6JjRdUDfekzZ89zGtNAQquYw4wnLKAxrd+9yLaA1SwxKraGZhlknyS0t8UaJTydQOqjlHrS4kq2CzavBcKdRmWY0h7L9TDJK3qZo87ptd7Zc3oxooY81F7tWEcyu1pKpUOxT6zVCDMqafQeTO1ex5DseTMKYjUKfUst7ezdaCA9aTbokQ5id8xwo46TaJXpoK7qWsQEDZOvyRINhSzXSAs4MjKZPD1SD7v6g6e27Ow4Ywhqy/lI51vDp8Bk/pi5v/mGOAWY1uRW36qlNMocoMdYPcbrrKm+KbLvVCnzi12xRY42eiPNEyYTh0ncUkv1I71SYsme6bzEfq8lH2oG0UPizJnmHAT6Zk12JI8PanM+QoK+ypPCbb3mu3R1S1sHrYJy1qGuezgS1XZW4v9doUUYskIxdlkvmNmuY0s7z12dq7b1hwZb2u3lp6lzzmUykKVZ7C3JSDv8qrEcN8Z6jcMfKaCDY8kjfbHy6Fiv9rWbJgJNi3DIoEayja/yuqM3mNM4VQzWYDBePc7o1d2lK1s2uR9rYj+8q1XwV5ivsGE1mcNWgaZfD3b8O/rAau8MB1D99Yaia6l5wHfAPtvVXkYIFuuRjc65ZyYia7zkIZNo3N2bljP6tHImhx09mJdjOdCOH/IoTs1Uy7KHu3U7BAvPObFzrY2AkS7c989Ny8VP6e23bD3SfHWoYcjc5bal1F89HzpMRuEsGrWtiDqrZXhLDiPiZrobZijZ0Ax9GQHZ2w5GQtqnRnWNZ1e41NaeQzeN41gy0W77QIfyvZOJ9kTzcvSQLxZ9i4Gcqs9EMUUAZArVAxjyoZessxe2ysWrslfAQ/09AHPW6tEGmf+XNHAYI2NHQ+esImpbcxTDcqajva0oYSgWYiR2ZgK1WgeXMM+hoq0RbarS8wt9EjXXG/Op9J7X14u7OgA/0BXOIz6/MY80OfAjCxl2NQNAcjh4n7uEs7QP1/RwqMvDI5wFPo2g/GtItnFFMvPMvj503zszNR0MjwWeMq2uyRorL+IwA6tnM8qo1zm5GmlQjwocncIIE4SQVOT65LEieILjFHEX9J390aH+SEFDdaZrFY4ymZCIF2AnEqcK0wuXp+WCnIWcQ734ONK89et2VOrXKrksu4qm8xp+Ew1Du1jj1cxqwlLs1s+N7ggCR0RWp3VoL8rdtMP41WBVeEmKSEvCzdXgpXSPtcLu6fYA5x3e1a0t7+2grcTOwkJ08Yp273LWTIvOA33xeKS/CVilCw2/lmx6XpPvvr5tpM0zfZjKioVdRI75gQqFU1MilfvS6vTiM4we1s4kq3IM6joqTDyiY+Vdap6zaLu4XQ4fnMgReusZshDFwnH52lY5d3Giiz2thLe08tpL207YJ1Ac78lZCyZ0/e1dOiu7fdBQb1+gZDJWR7Ji1DtwxfYwGk1ieKeMAR6cAHzUMtP8RsTv78sxB1u+PxNuSxF45RnBdC7EWfdv6rZBzkq7TcEn9JjOLao0BOWQboBYk1xni7T8q3yG3UKzq/b3FonR/Gqv0DbkPmpsGB20rmjtySK0ULRNtDTt6A/BuaE91mLAhnTvYFwea9d+X5HFxvSTHIa9YdO5oqtXRs+bY6wV6UJZbhMUrKKgpTX1lSz3LqBs8WQcXsvOgT46pMqDujmRzpnrdLBUpLFpvnhtR1fIHKA1DDVnsXvv7e/EfCJFblTcATLMmoW1JMuz4qD6TH/Ic+a8JMs8CTfIcPrmwOSHdJUdMQnDSXv6QwXyx1oFmeD/v52FPf8DySp0Gc9oSoMAAAAASUVORK5CYII="
+                                     class="mS2cs">
+                            </div>
+                            <div class="_1Swet">
+                            </div>
+                            <div class="_1BB3Z"></div>
+                        </div>
+                        <div class="yxuhE _1-JZp">
+
+                        </div>
+                    </div>
+
+                    <div class="_1fb4H"></div>
+                    <div class="_27VLw">
+                        <div class="vPGr9"></div>
+                    </div>
+                    <a class="_2_rJ6 _2SZq2 _3mirU}" title="关闭"></a>
+                </div>
+            </div>
+        </div>
+        <div class="s-isindex-wrap sui-wraper">
+            <div class="sui-tips s-isindex-wrap sui-tips-exceedtipnews" style="display: none; width: auto;">
+                <div class="sui-tips-arrow" style="left: 15px;"><em></em></div>
+                <div class="sui-tips-body">今天召唤我太多次啦，<br>明天再来调教小度吧！`(*∩_∩*)′</div>
+            </div>
+            <div class="sui-tips s-isindex-wrap " style="display: none; width: auto;">
+                <div class="sui-tips-body">已减少同类文章推荐，登录后更精确</div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper_wrapper"></div>
+</div>
+<input type="hidden" id="bsToken" name="bsToken" value="2bc33c8b77f93f4a8473b6782f664874">
+<script>
+
+
+    var bds = {
+        se: {},
+        su: {
+            urdata: [],
+            urSendClick: function () {
+            },
+            urStatic: "https://dss1.bdstatic.com/5aV1bjqh_Q23odCf"
+        },
+        util: {},
+        use: {},
+        comm: {
+            domain: "",
+            ubsurl: "",
+            tn: "",
+            queryEnc: "",
+            queryId: "",
+            inter: "",
+            sugHost: "",
+            query: "",
+            qid: "",
+            cid: "",
+            sid: "",
+            stoken: "",
+            serverTime: "",
+            user: "130******11",
+            username: "130******11",
+            loginAction: [],
+            useFavo: "",
+            pinyin: "",
+            favoOn: "",
+            curResultNum: "0",
+            rightResultExist: false,
+            protectNum: 0,
+            zxlNum: 0,
+            pageNum: 1,
+            pageSize: 10,
+            ishome: 1,
+            newindex: 1
+        }
+    };
+
+    bds.comm.indexSid = "";
+
+    bds.comm.personalData =
+        {
+
+
+            "city_weather": "0"
+
+            ,
+            "curCard": "2"
+
+            ,
+            "personalSwitch": "1"
+
+            ,
+            "sugStoreSet": "0"
+
+
+        }
+    ;
+
+    bds.comm.dpquery = "";
+
+    bds.comm.isNode = 1;
+
+
+    var name, navigate, al_arr = [];
+
+    var selfOpen = window.open;
+    eval("var open = selfOpen;");
+
+    var isIE = navigator.userAgent.indexOf("MSIE") != -1 && !window.opera;
+
+    var E = bds.ecom = {};
+
+    bds.se.mon = {
+        loadedItems: [],
+        load: function () {
+        },
+        srvt: -1
+    };
+    try {
+        bds.se.mon.srvt = parseInt(document.cookie.match(new RegExp("(^| )BDSVRTM=([^;]*)(;|$)"))[2]);
+        document.cookie = "BDSVRTM=;expires=Sat, 01 Jan 2000 00:00:00 GMT"
+    } catch (e) {
+    }
+
+
+    var
+
+
+
+    bds.comm.sampleval = [];
+    bds.comm.nodeSample = []
+
+    bds.comm.desktopSampleval = "";
+
+    bds.comm.aiSampleval = false;
+
+
+    bds.comm.samNewBox = 0;
+
+
+    bds.comm.newTopMenu = 1;
+    bds.comm.newSearchBox = 1;
+
+    bds.comm.newSearchbox = 1;
+
+
+    bds.comm.sIndex = 1;
+
+
+    bds.comm.pdc = 0;
+
+
+    bds.comm.newNav = 0;
+
+
+    bds.comm.samNewBox = 0;
+
+
+    bds.comm.popUpAdvert = {}
+
+
+    var s_domain = {
+        "protocol": "https",
+        "staticUrl": "https://pss.bdstatic.com/",
+        "base": "home",
+        "baseuri": "/home",
+        "passconf": "http://passport.baidu.com/ubrwsbas",
+        "logout": "https://passport.baidu.com/?logout&amp;u=",
+        "bs": "www.baidu.com",
+        "login": "http://passport.baidu.com/?login&amp;tpl=super&amp;u=",
+        "sp": "http://hi.baidu.com/",
+        "ssllist":
+            {
+
+
+                "su.bdimg.com": "dss0.bdstatic.com\/5a21bjqh_Q23odCf"
+
+                ,
+                "1.ur.bdimg.com": "dss1.bdstatic.com\/k4oTfnSm1A5BphGlnYG"
+
+                ,
+                "2.ur.bdimg.com": "dss2.bdstatic.com\/kvoTfnSm1A5BphGlnYG"
+
+                ,
+                "3.ur.bdimg.com": "dss3.bdstatic.com\/kfoTfnSm1A5BphGlnYG"
+
+                ,
+                "4.ur.bdimg.com": "dss0.bdstatic.com\/lPoTfnSm1A5BphGlnYG"
+
+                ,
+                "5.ur.bdimg.com": "dss1.bdstatic.com\/l4oTfnSm1A5BphGlnYG"
+
+                ,
+                "6.ur.bdimg.com": "dss2.bdstatic.com\/lvoTfnSm1A5BphGlnYG"
+
+                ,
+                "7.ur.bdimg.com": "dss3.bdstatic.com\/lfoTfnSm1A5BphGlnYG"
+
+                ,
+                "8.ur.bdimg.com": "dss0.bdstatic.com\/iPoTfnSm1A5BphGlnYG"
+
+                ,
+                "dj0.baidu.com": "sp1.baidu.com\/-L-Wsjip0QIZ8tyhnq"
+
+                ,
+                "dj1.baidu.com": "sp1.baidu.com\/-L-Xsjip0QIZ8tyhnq"
+
+                ,
+                "dj2.baidu.com": "sp2.baidu.com\/-L-Ysjip0QIZ8tyhnq"
+
+                ,
+                "eclick.baidu.com": "sp3.baidu.com\/-0U_dTmfKgQFm2e88IuM_a"
+
+                ,
+                "a.hiphotos.baidu.com": "dss0.baidu.com\/94o3dSag_xI4khGko9WTAnF6hhy"
+
+                ,
+                "b.hiphotos.baidu.com": "dss1.baidu.com\/9vo3dSag_xI4khGko9WTAnF6hhy"
+
+                ,
+                "c.hiphotos.baidu.com": "dss3.baidu.com\/9fo3dSag_xI4khGko9WTAnF6hhy"
+
+                ,
+                "d.hiphotos.baidu.com": "dss0.baidu.com\/-Po3dSag_xI4khGko9WTAnF6hhy"
+
+                ,
+                "e.hiphotos.baidu.com": "dss1.baidu.com\/-4o3dSag_xI4khGko9WTAnF6hhy"
+
+                ,
+                "f.hiphotos.baidu.com": "dss2.baidu.com\/-vo3dSag_xI4khGko9WTAnF6hhy"
+
+                ,
+                "g.hiphotos.baidu.com": "dss3.baidu.com\/-fo3dSag_xI4khGko9WTAnF6hhy"
+
+                ,
+                "h.hiphotos.baidu.com": "dss0.baidu.com\/7Po3dSag_xI4khGko9WTAnF6hhy"
+
+                ,
+                "bdimg.share.baidu.com": "dss1.baidu.com\/9rA4cT8aBw9FktbgoI7O1ygwehsv"
+
+                ,
+                "s.share.baidu.com": "sp1.baidu.com\/5foZdDe71MgCo2Kml5_Y_D3"
+
+                ,
+                "s1.bdstatic.com": "dss1.bdstatic.com\/5eN1bjq8AAUYm2zgoY3K"
+
+                ,
+                "p2.youxi.bdimg.com": "dss2.bdstatic.com\/5OZ1hTW64A63otebn9fN2DJv"
+
+                ,
+                "youxi.baidu.com": "sp3.baidu.com\/y0kThD4a2gU2pMbgoY3K"
+
+                ,
+                "fm.baidu.com": "dss3.baidu.com\/-rd1bjeh1BF3odCf"
+
+                ,
+                "music.baidu.com": "dss2.baidu.com\/8_1ZdTna2gU2pMbgoY3K"
+
+                ,
+                "f3.baidu.com": "sp2.baidu.com\/-uV1bjeh1BF3odCf"
+
+                ,
+                "sclick.baidu.com": "sp1.baidu.com\/5bU_dTmfKgQFm2e88IuM_a"
+
+                ,
+                "1.su.bdimg.com": "dss0.bdstatic.com\/k4oZeXSm1A5BphGlnYG"
+
+                ,
+                "2.su.bdimg.com": "dss1.bdstatic.com\/kvoZeXSm1A5BphGlnYG"
+
+                ,
+                "3.su.bdimg.com": "dss2.bdstatic.com\/kfoZeXSm1A5BphGlnYG"
+
+                ,
+                "4.su.bdimg.com": "dss3.bdstatic.com\/lPoZeXSm1A5BphGlnYG"
+
+                ,
+                "5.su.bdimg.com": "dss0.bdstatic.com\/l4oZeXSm1A5BphGlnYG"
+
+                ,
+                "6.su.bdimg.com": "dss1.bdstatic.com\/lvoZeXSm1A5BphGlnYG"
+
+                ,
+                "7.su.bdimg.com": "dss2.bdstatic.com\/lfoZeXSm1A5BphGlnYG"
+
+                ,
+                "8.su.bdimg.com": "dss3.bdstatic.com\/iPoZeXSm1A5BphGlnYG"
+
+                ,
+                "nssug.baidu.com": "sp1.baidu.com\/8qUZeT8a2gU2pMbgoY3K"
+
+                ,
+                "up.photo.baidu.com": "sp1.baidu.com\/6_R1fD_bAAd3otqbppnN2DJv"
+
+                ,
+                "suggestion.baidu.com": "sp1.baidu.com\/5a1Fazu8AA54nxGko9WTAnF6hhy"
+
+                ,
+                "t10.baidu.com": "t10.baidu.com"
+
+                ,
+                "t11.baidu.com": "t11.baidu.com"
+
+                ,
+                "t12.baidu.com": "t12.baidu.com"
+
+                ,
+                "play.baidu.com": "dss3.baidu.com\/5LgHhXSm2Q5IlBGlnYG"
+
+                ,
+                "olime.baidu.com": "sp1.baidu.com\/8bg4cTva2gU2pMbgoY3K"
+
+                ,
+                "i.baidu.com": "sp1.baidu.com\/74oIbT3kAMgDnd_"
+
+                ,
+                "c.baidu.com": "sp1.baidu.com\/9foIbT3kAMgDnd_"
+
+                ,
+                "b1.baidu.com": "dss1.baidu.com\/9uN1bjeh1BF3odCf"
+
+                ,
+                "nsclick.baidu.com": "sp1.baidu.com\/8qUJcD3n0sgCo2Kml5_Y_D3"
+
+                ,
+                "b1.bdstatic.com": "dss0.bdstatic.com\/9uN1bjq8AAUYm2zgoY3K"
+
+                ,
+                "i7.baidu.com": "dss0.baidu.com\/73F1bjeh1BF3odCf"
+
+                ,
+                "i8.baidu.com": "dss0.baidu.com\/73x1bjeh1BF3odCf"
+
+                ,
+                "i9.baidu.com": "dss0.baidu.com\/73t1bjeh1BF3odCf"
+
+                ,
+                "ecma.bdimg.com": "dss1.bdstatic.com\/-0U0bXSm1A5BphGlnYG"
+
+                ,
+                "tag.baidu.com": "sp1.baidu.com\/6LMFsjip0QIZ8tyhnq"
+
+                ,
+                "hw.baidu.com": "sp1.baidu.com\/7KF1bjeh1BF3odCf"
+
+                ,
+                "opendata.baidu.com": "sp1.baidu.com\/8aQDcjqpAAV3otqbppnN2DJv"
+
+                ,
+                "open.baidu.com": "dss1.baidu.com\/8aQDcnSm2Q5IlBGlnYG"
+
+                ,
+                "api.open.baidu.com": "sp1.baidu.com\/9_Q4sjW91Qh3otqbppnN2DJv"
+
+                ,
+                "xiaodu.baidu.com": "sp1.baidu.com\/yLsHczq6KgQFm2e88IuM_a"
+
+                ,
+                "s0.nuomi.bdimg.com": "dss1.bdstatic.com\/5eR1ciub_Q63otebn9fN2DJv"
+
+                ,
+                "s1.nuomi.bdimg.com": "dss0.baidu.com\/5eN1ciub_Q63otebn9fN2DJv"
+
+                ,
+                "s2.nuomi.bdimg.com": "dss2.bdstatic.com\/5eZ1ciub_Q63otebn9fN2DJv"
+
+                ,
+                "vse.baidu.com": "sp3.baidu.com\/6qUDsjip0QIZ8tyhnq"
+
+                ,
+                "himg.bdimg.com": "dss1.bdstatic.com\/7Ls0a8Sm1A5BphGlnYG"
+
+                ,
+                "ss.bdimg.com": "dss1.bdstatic.com\/5aV1bjqh_Q23odCf"
+
+                ,
+                "ecmb.bdimg.com": "dss0.bdstatic.com\/-0U0bnSm1A5BphGlnYG"
+
+                ,
+                "e.su.bdimg.com": "dss0.bdstatic.com\/-4oZeXSm1A5BphGlnYG"
+
+                ,
+                "sensearch.baidu.com": "sp1.baidu.com\/5b11fzupBgM18t7jm9iCKT-xh_"
+
+                ,
+                "sestat.baidu.com": "sp1.baidu.com\/5b1ZeDe5KgQFm2e88IuM_a"
+
+                ,
+                "cdn00.baidu-img.cn": "dss0.bdstatic.com\/9bA1vGba2gU2pMbfm9GUKT-w"
+
+                ,
+                "cdn01.baidu-img.cn": "dss0.bdstatic.com\/9bA1vGfa2gU2pMbfm9GUKT-w"
+
+
+            }
+
+    };
+
+
+    var s_session = {
+        "logId": "2154761468",
+        "sessionId": "",
+        "rids": "",
+        "seqId": "0xa9d14de4006f0cfc",
+        "qid": "0xa9d14de4006f0cfc",
+        "debug": false,
+        "portrait": "public.1.650a9f94.gA6q2iEmWPv5dcgsR-37hQ",
+        "logPortrait": "",
+        "portraitSkin2nd": "c1d83133302a2a2a2a2a2a3131ga83601000000",
+        "userProp":
+            {}
+        ,
+        "userTips":
+            {
+
+
+                "hasWeatherMod": "1"
+
+                ,
+                "homepageTTS": "1"
+
+                ,
+                "isLite": "1"
+
+                ,
+                "isNewTabSearch": "0"
+
+                ,
+                "randomSkin": "0"
+
+                ,
+                "skinLogoHasSkined": "1"
+
+                ,
+                "weatherShowWarning": "1"
+
+
+            }
+        ,
+        "userAttr": Number("") || 0,
+        "username": "130******11",
+        "unametype": "3",
+        "userIsSkined": "off",
+        "userIsNewSkined": "off",
+        "userSkinName": "0",
+        "userSkinOpacity": "70",
+        "userSkinUrl": "",
+        "userSkinLogo": "logo_white",
+        "userSkinDefined": "off",
+        "userLogoSrc": "\//search-operate.cdn.bcebos.com/e8cbce1d53432a6950071bf26b640e2b.gif",
+        "userLogoSrcRe": "\//search-operate.cdn.bcebos.com/e8cbce1d53432a6950071bf26b640e2b.gif",
+        "userLogoIsFestival": "1",
+        "userLogoIsupload": "false",
+        "usertype": "",
+        "curmod": "2",
+        "firstmod": "2",
+        "userFirst": "",
+        "logoCode": false,
+        "isFesLogo": true,
+        "isHaveWrodLink": false,
+        "userNavEmpty": "",
+        "bgUNE": "",
+        "isEmptyRpRec": "",
+        "userBirthday": "",
+        "yuce": "",
+        "sid": "60360_60453_60469_60491_60499_60518_60551_60564",
+        "mSid": "",
+        "sample_value": "",
+        "strategy_hit": "",
+        "issync": "",
+        "isdev": "",
+        "isUsedNav": "",
+        "isRewardBox": "",
+        "isNewMsg": "",
+        "load_module": {"type": ["weather"], "weatherID": ''},
+        "modules": ["0"],
+        "modules_load": ["0"],
+        "isLiteVersion": "1",
+        "crids": "",
+        "audioModernizr": false,
+        "isLogin": true,
+        "agingVoice": "0",
+        "isLite": "1"
+    };
+
+
+    window._sp_async = 1;
+    window.__async_strategy = 2;
+</script>
+<script type="text/javascript" src="./百度一下，你就知道_files/jquery-1-edb203c114.10.2.js.下载"></script>
+<script type="text/javascript" src="./百度一下，你就知道_files/esl-d776bfb1aa.js.下载"></script>
+<script data-for="esl-config">(function () {
+    var amd = {
+        keys: {}, addPaths: function (opt) {
+            if (typeof opt !== "object") {
+                return
+            }
+            for (var key in opt) {
+                if (opt.hasOwnProperty(key)) {
+                    opt[key] = opt[key].replace(/(\.js)/, "")
+                }
+            }
+            require.config({paths: opt});
+            $.extend(amd.keys, opt)
+        }, addConfig: function (config) {
+            if (typeof config !== "object") {
+                return
+            }
+            require.config(config);
+            for (var item in config) {
+                if (config.hasOwnProperty(item)) {
+                    if (!amd[item]) {
+                        amd[item] = {}
+                    }
+                    for (var key in config[item]) {
+                        if (config[item].hasOwnProperty(key) && config[item][key]) {
+                            amd[item][key] = config[item][key]
+                        }
+                    }
+                }
+            }
+        }
+    };
+    s_domain.amd = amd;
+    var staticUrl = s_domain.staticUrl + "static/superman/";
+    amd.addPaths({
+        "@baidu/video-meeting": staticUrl + "amd_modules/@baidu/video-meeting-1be7f62dac.js",
+        "superman/components/video-meet": staticUrl + "js/components/video-meet-7833028d86.js",
+        tslib: staticUrl + "amd_modules/tslib-c95383af0c.js",
+        "superman/components/guide_tips": staticUrl + "js/components/guide_tips-d9e617f782.js",
+        "superman/components/login_guide": staticUrl + "js/components/login_guide-4fba3971ce.js",
+        "superman/components/bbox/bbox_view": staticUrl + "js/components/bbox/bbox-view-df7e8cb3b0.js",
+        "@baidu/aging-tools-pc": staticUrl + "amd_modules/@baidu/aging-tools-pc-1e5afe8bdf.js",
+        "superman/components/aging-tools": staticUrl + "js/components/aging-tools-13270120c7.js",
+        "superman/components/ubc": staticUrl + "js/components/ubc.js",
+        "superman/components/top-right-operate/operate": staticUrl + "js/components/top-right-operate/operate-b7693b0cc7.js",
+        "superman/components/content-info": staticUrl + "js/components/content-info-12dbf9fb6d.js",
+        "superman/components/csaitab-log": staticUrl + "js/components/csaitab-log-75d5350518.js",
+        "superman/components/invoke": staticUrl + "js/components/invoke-97e9694cb9.js",
+        "superman/components/placeholder": staticUrl + "js/components/placeholder-f3bc3565f2.js",
+        "ai-search-box-entry": staticUrl + "/amd_modules/@baidu/ai-search-box-entry-ea20fec552.js"
+    })
+})();</script>
+<script type="text/javascript">bds.util.domain = function () {
+    var list = $.extend({}, s_domain.ssllist);
+    $.each(list, function (i, e) {
+        if (list[i].indexOf("https://") < 0) {
+            list[i] = "https://" + list[i]
+        }
+    });
+    var get = function (url) {
+        if (s_domain.protocol == "http:") {
+            return url
+        }
+        var reg = /^(http[s]?:\/\/)?([^\/]+)(.*)/, matches = url.match(reg);
+        url = list.hasOwnProperty(matches[2]) && list[matches[2]] + matches[3] || url;
+        return url
+    }, set = function (kdomain, vdomain) {
+        list[kdomain] = vdomain
+    };
+    return {get: get, set: set}
+}();
+bds.comm.sugHost = bds.util.domain.get(
+    "http://suggestion.baidu.com/su");</script>
+<script type="text/javascript">function isHitSampling(e) {
+    return bds && bds.comm && bds.comm.sampleval ? bds.comm.sampleval.indexOf(e) >= 0 : !1
+}
+
+define("modules/monitor/log-send", ["require", "exports"], function (e, t) {
+    "use strict";
+
+    function o(e) {
+        if (!e) return !1;
+        var t = document.cookie.indexOf("webbtest=1") > -1;
+        return t || Math.random() < e
+    }
+
+    function i(e) {
+        return "1" === bds.comm.alwaysMonitor ? (e.alwaysMonitor = 1, !0) : !1
+    }
+
+    function n(e, t) {
+        if (void 0 === t && (t = "except"), !(e.group && o(r.sample[e.group]) || i(e.info))) return "";
+        var n = e.pid || "1_87";
+        bds.comm.ishome && (n = "1_79");
+        var s = bds.comm.qid || bds.comm.queryId,
+            a = r.logServer + "?pid=" + n + "&lid=" + s + "&ts=" + Date.now() + "&type=" + t + "&group=" + e.group + "&info=" + encodeURIComponent(JSON.stringify(e.info)) + "&dim=" + encodeURIComponent(JSON.stringify(e.dim || {})),
+            c = new Image;
+        return c.src = a, a
+    }
+
+    t.__esModule = !0, t.send = void 0;
+    var r = {
+        pid: "1_87",
+        sample: {
+            jserror: .02,
+            iframe: .02,
+            resLoadSlow: .02,
+            imgError: .02,
+            resBigimg: .02,
+            httpRes: .02,
+            lsInfo: 1,
+            lsCost: .02,
+            codeCoverage: .02,
+            pcUrlUnEncode: .1,
+            abblock: .01,
+            ajaxError: .01,
+            screenDist: .01
+        },
+        logServer: "https://sp1.baidu.com/5b1ZeDe5KgQFm2e88IuM_a/mwb2.gif"
+    };
+    t.send = n
+}), define("modules/monitor/js-except", ["require", "exports", "modules/monitor/log-send"], function (e, t, o) {
+    "use strict";
+
+    function i(e, t) {
+        if (t.indexOf("chrome-extension://") > -1 || t.indexOf("moz-extension://") > -1) return !1;
+        var o = e.toLowerCase();
+        return "script error." === o || "script error" === o ? !1 : !0
+    }
+
+    function n(e, t) {
+        try {
+            var n = {info: {}, dim: {}, group: ""}, r = n.info, s = e.target || e.srcElement,
+                a = navigator.connection || {};
+            if (r.downlink = a.downlink, r.effectiveType = a.effectiveType, r.rtt = a.rtt, r.deviceMemory = navigator.deviceMemory || 0, r.hardwareConcurrency = navigator.hardwareConcurrency || 0, r.saveData = !!a.saveData, s !== window && "onerror" !== t) return;
+            var c = e.error || {}, p = c.stack || "";
+            e.message && i(e.message, p) && (n.group = "jserror", r.msg = e.message, r.file = e.filename, r.ln = e.lineno, r.col = e.colno, r.stack = p.split("\n").slice(0, 3).join("\n"), o.send(n))
+        } catch (m) {
+            console.error(m)
+        }
+    }
+
+    function r() {
+        var e, t = !1, o = navigator.userAgent.toLowerCase(), i = /msie ([0-9]+)/.exec(o);
+        if (i && i[1]) {
+            if (e = parseInt(i[1], 10), 7 >= e) return;
+            9 >= e && (t = !0)
+        }
+        t ? window.onerror = function (e, t, o, i) {
+            n({message: e, filename: t, lineno: o, colno: i}, "onerror")
+        } : window.addEventListener && window.addEventListener("error", n, !0)
+    }
+
+    t.__esModule = !0, t.listenerExcept = void 0, t.listenerExcept = r
+}), define("modules/ajax-log/ajax-log.service", ["require", "exports", "tslib", "modules/monitor/log-send"], function (e, t, o, i) {
+    "use strict";
+
+    function n(e, t, n) {
+        var r = Date.now(), s = o.__assign(o.__assign({}, e), {msg: t, time: r - n}), a = {group: "ajaxError", info: s};
+        i.send(a, "except")
+    }
+
+    function r(e) {
+        return e >= 200 && 300 > e
+    }
+
+    function s(e) {
+        if (!e || !e.entries()) return "";
+        for (var t = [], o = e.entries(), i = o.next(); !i.done; i = o.next()) t.push(i.value.join(": "));
+        return t.join("\r\n")
+    }
+
+    function a() {
+        XMLHttpRequest.prototype.open = function () {
+            for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
+            var o = {type: "xhr", method: e[0], url: e[1], msg: "", pageUrl: location.href};
+            return $.extend(this, {xhrSpyInfo: o}), m.apply(this, e)
+        }, XMLHttpRequest.prototype.send = function () {
+            for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
+            var o = this.xhrSpyInfo || {}, i = Date.now(), s = "string" == typeof e[0] ? e[0] : "";
+            return o.body = (s || "").slice(0, 200), this.addEventListener("error", function () {
+                (this.readyState !== XMLHttpRequest.DONE || r(this.status)) && n(o, "ajax network error", i)
+            }), this.addEventListener("readystatechange", function () {
+                this.readyState !== XMLHttpRequest.DONE || r(this.status) || n(o, "ajax error status-" + this.status, i)
+            }), this.addEventListener("timeout", function () {
+                n(o, "ajax timeout error", i)
+            }), u.apply(this, e)
+        }
+    }
+
+    function c() {
+        var e = window.fetch;
+        window.fetch = function () {
+            for (var t = [], i = 0; i < arguments.length; i++) t[i] = arguments[i];
+            var r = t[0], a = t[1] || {body: "", method: "GET"}, c = "string" == typeof a.body ? a.body : "",
+                p = Date.now(), m = {
+                    type: "fetch",
+                    method: a.method || "GET",
+                    url: r,
+                    body: (c || "").slice(0, 200),
+                    msg: "",
+                    code: 0,
+                    pageUrl: location.href
+                };
+            return e.apply(this, t).then(function (e) {
+                return e.ok || (m = o.__assign(o.__assign({}, m), {
+                    response: s(e.headers),
+                    code: e.status
+                }), e.clone().text().then(function (e) {
+                    m.response = e
+                }), n(m, "fetch error", p)), e
+            })["catch"](function (e) {
+                var t = e.message || "fetch error";
+                throw n(m, t, p), e
+            })
+        }
+    }
+
+    function p() {
+        a(), c()
+    }
+
+    t.__esModule = !0, t.initInterceptor = t.initFetchInterceptor = t.initXHRInterceptor = t.fetchResponseHeadersToString = t.validateStatus = t.sendSpyLog = void 0;
+    var m = XMLHttpRequest.prototype.open, u = XMLHttpRequest.prototype.send;
+    t.sendSpyLog = n, t.validateStatus = r, t.fetchResponseHeadersToString = s, t.initXHRInterceptor = a, t.initFetchInterceptor = c, t.initInterceptor = p
+});
+var Cookie = {
+    set: function (e, t, o, i, n, r) {
+        document.cookie = e + "=" + (r ? t : escape(t)) + (n ? "; expires=" + n.toGMTString() : "") + (i ? "; path=" + i : "; path=/") + (o ? "; domain=" + o : "")
+    }, get: function (e, t) {
+        var o = document.cookie.match(new RegExp("(^| )" + e + "=([^;]*)(;|$)"));
+        return null != o ? unescape(o[2]) : t
+    }, clear: function (e, t, o) {
+        this.get(e) && (document.cookie = e + "=" + (t ? "; path=" + t : "; path=/") + (o ? "; domain=" + o : "") + ";expires=Fri, 02-Jan-1970 00:00:00 GMT")
+    }
+};
+!function () {
+    function save(e) {
+        var t = [], o = [], i = [];
+        for (tmpName in options) options.hasOwnProperty(tmpName) && "duRobotState" !== tmpName && (t.push('"' + tmpName + '":"' + options[tmpName] + '"'), o.push(tmpName), i.push(String(options[tmpName])));
+        var n = "{" + t.join(",") + "}";
+        if (bds.comm.personalData) if (bds.comm.isNode) {
+            var r = $("#bsToken") && $("#bsToken").val() || "";
+            $.ajax({
+                url: "/home/data/setups?bsToken=" + r,
+                type: "POST",
+                data: JSON.stringify({props: o, values: i}),
+                headers: {"Content-Type": "application/json"},
+                traditional: !0,
+                success: function () {
+                    writeCookie(), "function" == typeof e && e()
+                }
+            })
+        } else $.ajax({
+            url: "/ups/submit/addtips?product=ps&from=pcfe&tips=" + encodeURIComponent(n) + "&_r=" + (new Date).getTime(),
+            success: function () {
+                writeCookie(), "function" == typeof e && e()
+            }
+        }); else writeCookie(), "function" == typeof e && setTimeout(e, 0)
+    }
+
+    function set(e, t) {
+        options[e] = t
+    }
+
+    function get(e) {
+        return options[e]
+    }
+
+    function writeCookie() {
+        if (options.hasOwnProperty("sugSet")) {
+            var e = "0" == options.sugSet ? "0" : "3";
+            clearCookie("sug"), Cookie.set("sug", e, document.domain, "/", expire30y)
+        }
+        if (options.hasOwnProperty("sugStoreSet")) {
+            var e = 0 == options.sugStoreSet ? "0" : "1";
+            clearCookie("sugstore"), Cookie.set("sugstore", e, document.domain, "/", expire30y)
+        }
+        var t = Cookie.get("BAIDUID"), o = t.match(/NR=(\d+)/) ? t.match(/NR=(\d+)/)[1] : "";
+        if (options.resultNum && o !== options.resultNum.toString() && writeBAIDUID(), (isHitSampling("close_predict_a") || isHitSampling("close_predict_b")) && clearCookie("ORIGIN"), options.hasOwnProperty("isSwitch")) {
+            var i = {0: "2", 1: "0", 2: "1"}, e = i[options.isSwitch];
+            clearCookie("ORIGIN"), isHitSampling("close_predict_a") || isHitSampling("close_predict_b") || Cookie.set("ORIGIN", e, document.domain, "/", expire30y)
+        }
+        if (options.hasOwnProperty("imeSwitch")) {
+            var e = options.imeSwitch;
+            clearCookie("bdime"), Cookie.set("bdime", e, document.domain, "/", expire30y)
+        }
+    }
+
+    function writeBAIDUID() {
+        var e, t, o, i = Cookie.get("BAIDUID");
+        /FG=(\d+)/.test(i) && (t = RegExp.$1), /SL=(\d+)/.test(i) && (o = RegExp.$1), /NR=(\d+)/.test(i) && (e = RegExp.$1), options.hasOwnProperty("resultNum") && (e = options.resultNum), options.hasOwnProperty("resultLang") && (o = options.resultLang), Cookie.set("BAIDUID", i.replace(/:.*$/, "") + ("undefined" != typeof o ? ":SL=" + o : "") + ("undefined" != typeof e ? ":NR=" + e : "") + ("undefined" != typeof t ? ":FG=" + t : ""), ".baidu.com", "/", expire30y, !0)
+    }
+
+    function clearCookie(e) {
+        Cookie.clear(e, "/"), Cookie.clear(e, "/", document.domain), Cookie.clear(e, "/", "." + document.domain), Cookie.clear(e, "/", ".baidu.com")
+    }
+
+    function reset(e) {
+        options = defaultOptions, save(e)
+    }
+
+    var defaultOptions = {
+        sugSet: 1,
+        sugStoreSet: 1,
+        isSwitch: 1,
+        isJumpHttps: 1,
+        imeSwitch: 0,
+        resultNum: 10,
+        skinOpen: 1,
+        resultLang: 0,
+        duRobotState: "000"
+    }, options = {}, tmpName, expire30y = new Date;
+    expire30y.setTime(expire30y.getTime() + 94608e7);
+    try {
+        if (bds && bds.comm && bds.comm.personalData) {
+            if ("string" == typeof bds.comm.personalData && (bds.comm.personalData = eval("(" + bds.comm.personalData + ")")), !bds.comm.personalData) return;
+            for (tmpName in bds.comm.personalData) defaultOptions.hasOwnProperty(tmpName) && bds.comm.personalData.hasOwnProperty(tmpName) && "SUCCESS" == bds.comm.personalData[tmpName].ErrMsg && (options[tmpName] = bds.comm.personalData[tmpName].value)
+        }
+        try {
+            parseInt(options.resultNum) || delete options.resultNum, parseInt(options.resultLang) || "0" == options.resultLang || delete options.resultLang
+        } catch (e) {
+        }
+        writeCookie(), "sugSet" in options || (options.sugSet = 3 != Cookie.get("sug", 3) ? 0 : 1), "sugStoreSet" in options || (options.sugStoreSet = Cookie.get("sugstore", 0));
+        var BAIDUID = Cookie.get("BAIDUID");
+        "resultNum" in options || (options.resultNum = /NR=(\d+)/.test(BAIDUID) && RegExp.$1 ? parseInt(RegExp.$1) : 10), "resultLang" in options || (options.resultLang = /SL=(\d+)/.test(BAIDUID) && RegExp.$1 ? parseInt(RegExp.$1) : 0), "isSwitch" in options || (options.isSwitch = 2 == Cookie.get("ORIGIN", 0) ? 0 : 1 == Cookie.get("ORIGIN", 0) ? 2 : 1), "imeSwitch" in options || (options.imeSwitch = Cookie.get("bdime", 0))
+    } catch (e) {
+    }
+    window.UPS = {writeBAIDUID: writeBAIDUID, reset: reset, get: get, set: set, save: save}
+}(), function () {
+    require(["modules/monitor/js-except"], function (e) {
+        e.listenerExcept()
+    }), require(["modules/ajax-log/ajax-log.service"], function (e) {
+        e.initInterceptor()
+    });
+    var e = "https://pss.bdstatic.com/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js";
+    ("Mac68K" == navigator.platform || "MacPPC" == navigator.platform || "Macintosh" == navigator.platform || "MacIntel" == navigator.platform) && (e = "https://pss.bdstatic.com/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js"), setTimeout(function () {
+        $.ajax({url: e, cache: !0, dataType: "script"})
+    }, 0);
+    var t = navigator && navigator.userAgent ? navigator.userAgent : "",
+        o = document && document.cookie ? document.cookie : "",
+        i = !!(t.match(/(msie [2-8])/i) || t.match(/windows.*safari/i) && !t.match(/chrome/i) || t.match(/(linux.*firefox)/i) || t.match(/Chrome\/29/i) || t.match(/mac os x.*firefox/i) || o.match(/\bISSW=1/) || 0 == UPS.get("isSwitch"));
+    bds && bds.comm && (bds.comm.supportis = isHitSampling("close_predict_a") || isHitSampling("close_predict_b") ? !1 : !i, bds.comm.isui = !0), window.__restart_confirm_timeout = !0, window.__confirm_timeout = 8e3, window.__disable_is_guide = !0, window.__disable_swap_to_empty = !0, window.__switch_add_mask = !0, bds.comm.newindex && $(window).on("index_off", function () {
+        $('<div class="c-tips-container" id="c-tips-container"></div>').insertAfter("#wrapper"), window.__sample_dynamic_tab && $("#s_tab").remove()
+    }), bds.comm && bds.comm.ishome && Cookie.get("H_PS_PSSID") && (bds.comm.indexSid = Cookie.get("H_PS_PSSID"));
+    var n = $(document).find("#s_tab").find("a");
+    n && n.length > 0 && n.each(function (e, t) {
+        t.innerHTML && t.innerHTML.match(/新闻/) && (t.innerHTML = "资讯", t.href = "//www.baidu.com/s?rtt=1&bsst=1&cl=2&tn=news&word=", t.setAttribute("sync", !0))
+    })
+}();</script>
+<script type="text/javascript" src="./百度一下，你就知道_files/es6-polyfill_388d059.js.下载"></script>
+<script type="text/javascript" src="./百度一下，你就知道_files/polyfill_9354efa.js.下载"></script>
+<script type="text/javascript" src="./百度一下，你就知道_files/all_async_search_a5f663f.js.下载"></script>
+<script>
+    if (bds.comm.supportis) {
+        window.__restart_confirm_timeout = true;
+        window.__confirm_timeout = 8000;
+        window.__disable_is_guide = true;
+        window.__disable_swap_to_empty = true;
+    }
+
+    if (typeof initPreload == "function") {
+        initPreload({
+            'isui': true,
+            'index_form': "#form",
+            'index_kw': "#kw",
+            'result_form': "#form",
+            'result_kw': "#kw",
+            'isui': true
+        });
+    } else {
+        window._sp_async = undefined;
+        new Image().src = "/home/page/data/pageserver?errno=7004&from=superman&_t" + new Date() * 1;
+    }
+
+</script>
+<script type="text/javascript">(function () {
+    var index_head_css = $("#style_super_head_inline");
+    var index_is_css = $("#s_is_index_css");
+    window.index_links = [];
+    var head_index_css = $("head [index]");
+    window.index_on = function () {
+        s_session.index_off = false
+    };
+    var resultLogo = "//www.baidu.com/img/flexible/logo/pc/result.png";
+    var resultNewLogo = "//www.baidu.com/img/flexible/logo/pc/result@2.png";
+    var resultPeakLogo = "//www.baidu.com/img/flexible/logo/pc/peak-result.png";
+    var resultGray = "//www.baidu.com/img/flexible/logo/pc/result_gray.png"
+    ;var changeResultLogo = function (src, newSrc, peakSrc) {
+        if ($("#result_logo .index-logo-src").attr("src") !== src) {
+            $("#result_logo .index-logo-src").attr("src", src);
+            $("#result_logo .index-logo-srcnew").attr("src", newSrc);
+            $("#result_logo .index-logo-peak").attr("src", peakSrc)
+        }
+    };
+    window.index_off = function () {
+        var sFormWrapper = $(".s_form .s_form_wrapper");
+        if (bds.comm.inputColorConfig && bds.comm.inputColorConfig.barColor && bds.comm.sIndex) {
+            sFormWrapper.removeClass("scene-style")
+        }
+        s_session.index_off = true
+        ;bds.comm.sIndex = 0;
+        $(document.body).attr("link", "#0000cc");
+        index_links = [];
+        $("head").find("link").each(function () {
+            if ($(this).attr("data-for") !== "result") {
+                index_links.push(this);
+                $(this).remove()
+            }
+        });
+        index_is_css.remove();
+        index_head_css.remove();
+        $("#head_wrapper").css({width: "", marginBottom: 0});
+        $("#kw").css("font-family", "");
+        var decodeHTML = function (source) {
+            var str = String(source).replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+            return str.replace(/&#([\d]+);/g,
+                function (_0, _1) {
+                    return String.fromCharCode(parseInt(_1, 10))
+                })
+        };
+        $("head").append(decodeHTML($("#s_index_off_css").html()));
+        $("head").append(decodeHTML($("#s_is_result_css").html()));
+        $(".s-tips-skin").remove();
+        $(".s-skin-container").remove();
+        $("#s_mancard_newmusic").remove();
+        head_index_css.remove();
+        $("#s-hotsearch-wrapper").remove();
+        $("#s_side_wrapper").remove();
+        $("#blind-box").remove();
+        $("#s_popup_advert").remove();
+        $("#video-meeting").remove()
+        ;var isPreSearchboxGray = bds.comm.isPreSearchboxGray || "0";
+        var $body = $("body");
+        if (isPreSearchboxGray === "0") {
+            $body.hasClass("big-event-gray") && $("body").removeClass("big-event-gray");
+            changeResultLogo(resultLogo, resultNewLogo, resultPeakLogo)
+        }
+        if (isPreSearchboxGray === "1" && !$body.hasClass("big-event-gray")) {
+            $("body").addClass("big-event-gray");
+            changeResultLogo(resultGray, resultGray, resultGray)
+        }
+        var nodeSample = bds && bds.comm && bds.comm.nodeSample || "";
+        var boxRec = nodeSample.indexOf("need_carousels"
+        ) > -1 || nodeSample.indexOf("no_need_carousels") > -1;
+        if (boxRec) {
+            $(".placeholder").remove()
+        }
+    }
+})();</script>
+<!--[if < IE 9]><script type="text/javascript" src="https://pss.bdstatic.com/static/superman/js/polyfill-ie8-30f98ab294.js"></script><![endif]-->
+<script type="text/javascript" src="./百度一下，你就知道_files/sbase-5440d5bf38.js.下载"></script>
+<link href="./百度一下，你就知道_files/ubase_sync-d600f57804.css" type="text/css" rel="stylesheet" inlinecontent="">
+<script>F._setMod("superman");
+F._fileMap({
+    "/js/sbase-5440d5bf38.js": ["lib/event.ts", "lib/extract_data.ts", "lib/commonUtils.ts", "plugin/browser", "plugin/strpx", "plugin/url", "plugin/ajax", "plugin/load_file", "plugin/string", "plugin/stringify", "plugin/localstorage", "plugin/fn", "plugin/easing", "plugin/mousewheel", "plugin/cookie", "lib/base", "lib/sbase", "lib/class", "lib/mod_evt", "lib/log", "lib/thunder", "lib/utils.js", "common/user_attr", "common/select", "common/bottom_layer", "components/ubc.ts",
+        "components/initSan.ts"],
+    "js/polyfill-ie8-30f98ab294.js": ["polyfill/object-define-property", "polyfill/object-keys"],
+    "/js/min_super-c4c7be2850.js": ["common/result_page", "common/image_lazy_load", "log/webb.min", "log/super_all", "lib/carditem_log", "ps/log", "ps/sindex", "ps/sug", "ps/fpid", "start/super_start", "page/info", "page/scroll"],
+    "/js/super_ext-a0b60bd05d.js": ["plugin/mousewheel", "weather/setting_refresh", "weather/setting_ctrl", "weather/setting_view", "weather/weather_city"],
+    "/js/resource_error_monitor-ed61c2f0be.js": ["page/resource_error_monitor.ts"],
+    "/js/super_load-8301698f5e.js": ["weather/weather_tpl", "weather/weather_ctrl", "weather/weather_autorefresh", "start/skin_start", "skin/skin_rewrite", "mngr/top_layer", "mngr/menu_user", "mngr/menu_common", "mngr/quit_dialog", "mngr/top_menunav_new", "common/guide_tip", "page/page_exp"],
+    "/js/skin_layer-72c77f7044.js": ["skin/skin_init_new", "skin/skin_cut_img", "skin/skin_model", "skin/skin_nav", "skin/skin_page", "skin/skin_tools",
+        "skin/skin_img", "skin/skin_control_new", "skin/skin_view", "skin/skin_new_upload", "skin/skin_setting", "skin/skin_preview", "skin/skin_defined", "skin/skin_opacity", "skin/skin_ajax", "skin/skin_extra", "skin/skin_random"],
+    "/js/opacity_mod-57b92b76b5.js": ["opacity/opacity_tpl", "opacity/opacity_action", "opacity/opacity_conf"],
+    "/js/min_setting-c3f73c1e26.js": ["setting/setting_constructor", "setting/mod_drag", "setting/setting_action"],
+    "/js/page_setting-f890166cc6.js": ["log/super_all", "setting/page_setting",
+        "setting/tab_msg", "start/page_setting_start", "common/pop", "setting/yaohao", "msg/const", "setting/data_adapter", "msg/bind", "msg/bind_window", "setting/common_setting"],
+    "/js/mancard-ca8bfaa734.js": ["skeleton/card", "skeleton/model", "skeleton/card_collection", "skeleton/card_showLog", "skeleton/card_alsLog", "skeleton/presenter", "skeleton/card_tab", "skeleton/card_refresh", "skeleton/toast", "setting/card_setting", "subscribe/parabola", "subscribe/subscribe"],
+    "/js/subscribe-d2630c5b22.js": [
+        "subscribe/subscribe"],
+    "/js/s_super_index-3fffae8d60.js": ["ps/autohover_input", "page/ua_monitor"],
+    "/js/s_super_async-12d728e63f.js": ["node_modules/@searchfe/inject-js/dist/amd/index.js", "node_modules/@searchfe/reflect-metadata/Reflect.js", "ps/autohover_input", "components/drag/dragComponent", "components/drag/dragEmitter", "components/drag/dragTool", "components/drag/draggable", "components/drag/dragsort", "components/drag/dragdir"],
+    "/js/min_mt-3df544d11c.js": ["msg/const", "msg/data_server",
+        "msg/data_adapter"],
+    "/js/components/content-info-12dbf9fb6d.js": ["components/content-info.ts"],
+    "/js/components/csaitab-log-75d5350518.js": ["components/csaitab-log.ts"],
+    "/js/components/top-right-operate/operate-b7693b0cc7.js": ["components/top-right-operate/operate.ts"],
+    "/js/mt_ext-4eee81afe1.js": ["msg/index_nav_msg_extend", "msg/msg_builder", "msg/bind", "msg/bind_window"],
+    "/js/min_notice-605fc17cf9.js": ["mt/mt_show", "mt/mt_msg_constructor"],
+    "/js/notice_ext-0bfec0da78.js": ["mt/mt_ext",
+        "mt/mt_msg_item", "mt/mt_msg_operate"],
+    "/js/ps/ishttps-8b74cccb13.js": ["ps/ishttps"],
+    "/js/ps/async-destroy-7dc70bccf0.js": ["ps/async-destroy"],
+    "/js/lib/exception-13bf584742.js": ["lib/exception"],
+    "/js/lib/jquery-1-edb203c114.10.2.js": ["lib/jquery-1.10.2"],
+    "/js/lib/esl-d776bfb1aa.js": ["lib/esl"],
+    "/js/ps/yc-4c3e9b9cb3.js": ["ps/yc"],
+    "/js/components/hotsearch-644cff7480.js": ["components/hotsearch"],
+    "/js/components/placeholder-f3bc3565f2.js": ["components/placeholder.ts"],
+    "/js/components/qrcode-0e4b67354f.js": ["components/qrcode"],
+    "/js/components/advert-064271ed9b.js": ["components/advert"],
+    "/js/components/nav-d9eab6af09.js": ["components/nav"],
+    "/js/components/tips-e2ceadd14d.js": ["components/tips"],
+    "/js/components/guide-8759cd328f.js": ["components/guide"],
+    "/js/components/bbox/bbox-view-df7e8cb3b0.js": ["components/bbox/bbox_view.ts", "components/bbox/bbox_animate.ts"],
+    "/js/components/guide_tips-d9e617f782.js": ["components/guide_tips.ts"],
+    "/js/components/login_guide-4fba3971ce.js": ["components/login_guide.ts"],
+    "/js/components/video-meet-7833028d86.js": ["components/video-meet.ts"],
+    "/amd_modules/@baidu/video-meeting-1be7f62dac.js": ["@baidu/video-meeting/dist/index", "@baidu/video-meeting"],
+    "/amd_modules/@baidu/aging-tools-pc-1e5afe8bdf.js": ["@baidu/aging-tools-pc/dist/index", "@baidu/aging-tools-pc"],
+    "/amd_modules/@baidu/ai-search-box-entry-ea20fec552.js": ["@baidu/ai-search-box-entry/dist/js/index"],
+    "/js/components/aging-tools-13270120c7.js": ["components/aging-tools.ts"],
+    "/amd_modules/tslib-c95383af0c.js": ["tslib", "./tslib/tslib"],
+    "/js/components/invoke-97e9694cb9.js": ["components/invoke.ts"],
+    "/js/news_new/index-20deaf7968.js": ["news_new/init_tts", "news_new/card_alsLog", "news_new/ck", "news_new/index_view", "news_new/index"],
+    "/js/min_tips-3c72b5b27b.js?v=md5": ["log/log", "start/tips_start"],
+    "/js/ubase-dddde7cd4e.js?v=md5": ["superuijs/superui", "superuijs/util/tool", "superuijs/util/emitter",
+        "superuijs/util/dot", "superuijs/util/smDot", "superuijs/component", "superuijs/component/draggable", "superuijs/component/scrollbar", "superuijs/component/dialog", "superuijs/component/tips", "superuijs/component/share", "superuijs/component/share2", "superuijs/component/notify", "superuijs/component/suggestion", "superuijs/component/placeholder"],
+    "/js/ubase_unused-e357fff740.js?v=md5": ["superuijs/component/draggsort", "superuijs/component/draggselect", "superuijs/component/draggdirs"],
+    "/js/utils-ce7201f913.js?v=md5": ["superuijs/util/pubsub"],
+    "/css/super_ext-36b360db2f.css": ["mngr_quit_guid.css"],
+    "/css/components/user_quit_dialog-527f3ede74.css": ["components/user_quit_dialog.css"],
+    "/css/super_min-6f52ab3317.css": ["super_init.css", "skin.css", "super_skin.css", "select.css", "index_guide.css"],
+    "/css/skin/skin_layer-d2120713ac.css": ["skin/skin_layer.css"],
+    "/css/guidetip-b41ed60c8a.css": ["guide.css"],
+    "/css/nsguide-a66438b784.css": ["ns_guide.css"],
+    "/css/setting_min-4dae12391e.css": [
+        "setting.css"],
+    "/css/card_setting-673b2943c1.css": ["card_setting.css"],
+    "/css/page_setting-da9f239ab9.css": ["super_setting.css", "select.css", "setting_msg.css", "setting_yaohao.css", "pop.css", "dialog.css"],
+    "/css/mt_min-88763bc1c9.css": ["mt_mod.css", "index_msg.css"],
+    "/css/pages/index-b0b3304de9.css": ["pages/index.css", "components/qrcode_new.css"],
+    "/css/pages/index_result-3a33835e40.css": ["pages/index_result.css"],
+    "/css/pages/result-7014ae574c.css": ["pages/result.css"],
+    "/css/pages/ps-78c2049dd9.css": ["pages/ps.css", "grid/grid.css"],
+    "/css/weather/weather_new-4aa68cfe53.css": ["weather/weather_new.css", "weather/weather_setting_new.css"],
+    "/css/pages/common-747e4c8a6a.css": ["components/head_wrapper_new.css", "s_top_wrap_new.css", "components/topmenu_new.css", "bottom_layer.css", "components/blind_box.css", "popup_advert.css", "components/guide_info.css", "components/aging_tool.css", "components/gray.css", "components/drag.css"],
+    "/css/components/hotsearch-5008bbbbeb.css": [
+        "components/hotsearch.css"],
+    "/css/components/nav-ffd5baab45.css": ["components/nav.css"],
+    "/css/card_min2-b454fbe89a.css": ["card_menu2.css", "card_side2.css"],
+    "/css/recommand/init-c52228535a.css": ["news_new/init.css", "news_new/waterfall.css", "news_new/custom_sui.css", "news_new/hot_search.css", "news_new/dialog.css"],
+    "/css/ubase_sync-d600f57804.css?v=md5": ["scrollbar_sync.css"],
+    "/css/ubase-89d6b96e41.css?v=md5": ["superui/superui.css", "superui/dialog.css", "superui/tips.css", "superui/share.css",
+        "superui/scrollbar.css", "superui/suggestion.css"],
+    "/css/ubase_sync-d600f57804.css?v=md5": ["superui/scrollbar_sync.css"]
+});
+window._xman_speed = window._xman_speed || {};
+F._setContext({base: "lib/sbase"});
+F.use("lib/mod_evt", function (evt) {
+    F._setContextMethod("fire", function (evtName, evtArgs) {
+        return evt.fire(this.svnMod + ":" + this.modName, evtName, evtArgs)
+    });
+    F._setContextMethod("listen", function (modName, evtName, handler) {
+        var mType = Object.prototype.toString.call(modName);
+        if (mType == "[object String]") {
+            if (
+                modName.indexOf(":") < 0) {
+                modName = this.svnMod + ":" + modName
+            }
+        } else if (mType == "[object Array]") {
+            for (var i = 0, len = modName.length; i < len; i++) {
+                if (modName[i].indexOf(":") < 0) {
+                    modName[i] = this.svnMod + ":" + modName[i]
+                }
+            }
+        }
+        evt.on(modName, evtName, handler)
+    });
+    F._setContextMethod("unListen", function (modName, evtName, handler) {
+        evt.un(this.svnMod + ":" + this.modName, evtName, handler)
+    })
+});
+F._loadScriptTimeout = 15e3;
+F._useConfig = true;
+F._firstScreenCSS = F._firstScreenCSS || [];
+F._firstScreenCSS.push("/css/super_min-6f52ab3317.css")
+;F._firstScreenJS = F._firstScreenJS || [];
+F._firstScreenJS.push("/js/min_super-c4c7be2850.js");</script>
+<script>
+    $(window).on("load", function () {
+        var e = $('#virus-2020');
+        e.click(function () {
+            $.setCookie('virus-2020-clicked', '1');
+            e.removeClass('dot');
+        });
+        var hasClicked = $.getCookie && $.getCookie('virus-2020-clicked');
+        if (!hasClicked) {
+            e.addClass('dot');
+        }
+    });
+</script>
+<script>
+    if (typeof F === 'object') {
+        F.use('superman:skeleton/presenter', function (presenter) {
+            presenter.desktopEvent();
+        });
+    }
+</script>
+<script>(function () {
+    var amd = {
+        keys: {}, addPaths: function (opt) {
+            if (typeof opt !== "object") {
+                return
+            }
+            for (var key in opt) {
+                if (opt.hasOwnProperty(key)) {
+                    opt[key] = opt[key].replace(/(\.js)/, "")
+                }
+            }
+            require.config({paths: opt});
+            $.extend(amd.keys, opt)
+        }, addConfig: function (config) {
+            if (typeof config !== "object") {
+                return
+            }
+            require.config(config);
+            for (var item in config) {
+                if (config.hasOwnProperty(item)) {
+                    if (!amd[item]) {
+                        amd[item] = {}
+                    }
+                    for (var key in config[item]) {
+                        if (config[item].hasOwnProperty(key) && config[item][key]) {
+                            amd[item][key] = config[item][key]
+                        }
+                    }
+                }
+            }
+        }
+    };
+    s_domain.amd = amd;
+    var staticUrl = s_domain.staticUrl + "static/superman/";
+    amd.addPaths({
+        "@baidu/video-meeting": staticUrl + "amd_modules/@baidu/video-meeting-1be7f62dac.js",
+        "superman/components/video-meet": staticUrl + "js/components/video-meet-7833028d86.js",
+        tslib: staticUrl + "amd_modules/tslib-c95383af0c.js",
+        "superman/components/guide_tips": staticUrl + "js/components/guide_tips-d9e617f782.js",
+        "superman/components/login_guide": staticUrl + "js/components/login_guide-4fba3971ce.js",
+        "superman/components/bbox/bbox_view": staticUrl + "js/components/bbox/bbox-view-df7e8cb3b0.js",
+        "@baidu/aging-tools-pc": staticUrl + "amd_modules/@baidu/aging-tools-pc-1e5afe8bdf.js",
+        "superman/components/aging-tools": staticUrl + "js/components/aging-tools-13270120c7.js",
+        "superman/components/ubc": staticUrl + "js/components/ubc.js",
+        "superman/components/top-right-operate/operate": staticUrl + "js/components/top-right-operate/operate-b7693b0cc7.js",
+        "superman/components/content-info": staticUrl + "js/components/content-info-12dbf9fb6d.js",
+        "superman/components/csaitab-log": staticUrl + "js/components/csaitab-log-75d5350518.js",
+        "superman/components/invoke": staticUrl + "js/components/invoke-97e9694cb9.js",
+        "superman/components/placeholder": staticUrl + "js/components/placeholder-f3bc3565f2.js",
+        "ai-search-box-entry": staticUrl + "/amd_modules/@baidu/ai-search-box-entry-ea20fec552.js"
+    })
+})();</script>
+<script>F._setMod("superman");
+F._fileMap({
+    "/js/sbase-5440d5bf38.js": ["lib/event.ts", "lib/extract_data.ts", "lib/commonUtils.ts", "plugin/browser", "plugin/strpx", "plugin/url", "plugin/ajax", "plugin/load_file", "plugin/string", "plugin/stringify", "plugin/localstorage", "plugin/fn", "plugin/easing", "plugin/mousewheel", "plugin/cookie", "lib/base", "lib/sbase", "lib/class", "lib/mod_evt", "lib/log", "lib/thunder", "lib/utils.js", "common/user_attr", "common/select", "common/bottom_layer", "components/ubc.ts",
+        "components/initSan.ts"],
+    "js/polyfill-ie8-30f98ab294.js": ["polyfill/object-define-property", "polyfill/object-keys"],
+    "/js/min_super-c4c7be2850.js": ["common/result_page", "common/image_lazy_load", "log/webb.min", "log/super_all", "lib/carditem_log", "ps/log", "ps/sindex", "ps/sug", "ps/fpid", "start/super_start", "page/info", "page/scroll"],
+    "/js/super_ext-a0b60bd05d.js": ["plugin/mousewheel", "weather/setting_refresh", "weather/setting_ctrl", "weather/setting_view", "weather/weather_city"],
+    "/js/resource_error_monitor-ed61c2f0be.js": ["page/resource_error_monitor.ts"],
+    "/js/super_load-8301698f5e.js": ["weather/weather_tpl", "weather/weather_ctrl", "weather/weather_autorefresh", "start/skin_start", "skin/skin_rewrite", "mngr/top_layer", "mngr/menu_user", "mngr/menu_common", "mngr/quit_dialog", "mngr/top_menunav_new", "common/guide_tip", "page/page_exp"],
+    "/js/skin_layer-72c77f7044.js": ["skin/skin_init_new", "skin/skin_cut_img", "skin/skin_model", "skin/skin_nav", "skin/skin_page", "skin/skin_tools",
+        "skin/skin_img", "skin/skin_control_new", "skin/skin_view", "skin/skin_new_upload", "skin/skin_setting", "skin/skin_preview", "skin/skin_defined", "skin/skin_opacity", "skin/skin_ajax", "skin/skin_extra", "skin/skin_random"],
+    "/js/opacity_mod-57b92b76b5.js": ["opacity/opacity_tpl", "opacity/opacity_action", "opacity/opacity_conf"],
+    "/js/min_setting-c3f73c1e26.js": ["setting/setting_constructor", "setting/mod_drag", "setting/setting_action"],
+    "/js/page_setting-f890166cc6.js": ["log/super_all", "setting/page_setting",
+        "setting/tab_msg", "start/page_setting_start", "common/pop", "setting/yaohao", "msg/const", "setting/data_adapter", "msg/bind", "msg/bind_window", "setting/common_setting"],
+    "/js/mancard-ca8bfaa734.js": ["skeleton/card", "skeleton/model", "skeleton/card_collection", "skeleton/card_showLog", "skeleton/card_alsLog", "skeleton/presenter", "skeleton/card_tab", "skeleton/card_refresh", "skeleton/toast", "setting/card_setting", "subscribe/parabola", "subscribe/subscribe"],
+    "/js/subscribe-d2630c5b22.js": [
+        "subscribe/subscribe"],
+    "/js/s_super_index-3fffae8d60.js": ["ps/autohover_input", "page/ua_monitor"],
+    "/js/s_super_async-12d728e63f.js": ["node_modules/@searchfe/inject-js/dist/amd/index.js", "node_modules/@searchfe/reflect-metadata/Reflect.js", "ps/autohover_input", "components/drag/dragComponent", "components/drag/dragEmitter", "components/drag/dragTool", "components/drag/draggable", "components/drag/dragsort", "components/drag/dragdir"],
+    "/js/min_mt-3df544d11c.js": ["msg/const", "msg/data_server",
+        "msg/data_adapter"],
+    "/js/components/content-info-12dbf9fb6d.js": ["components/content-info.ts"],
+    "/js/components/csaitab-log-75d5350518.js": ["components/csaitab-log.ts"],
+    "/js/components/top-right-operate/operate-b7693b0cc7.js": ["components/top-right-operate/operate.ts"],
+    "/js/mt_ext-4eee81afe1.js": ["msg/index_nav_msg_extend", "msg/msg_builder", "msg/bind", "msg/bind_window"],
+    "/js/min_notice-605fc17cf9.js": ["mt/mt_show", "mt/mt_msg_constructor"],
+    "/js/notice_ext-0bfec0da78.js": ["mt/mt_ext",
+        "mt/mt_msg_item", "mt/mt_msg_operate"],
+    "/js/ps/ishttps-8b74cccb13.js": ["ps/ishttps"],
+    "/js/ps/async-destroy-7dc70bccf0.js": ["ps/async-destroy"],
+    "/js/lib/exception-13bf584742.js": ["lib/exception"],
+    "/js/lib/jquery-1-edb203c114.10.2.js": ["lib/jquery-1.10.2"],
+    "/js/lib/esl-d776bfb1aa.js": ["lib/esl"],
+    "/js/ps/yc-4c3e9b9cb3.js": ["ps/yc"],
+    "/js/components/hotsearch-644cff7480.js": ["components/hotsearch"],
+    "/js/components/placeholder-f3bc3565f2.js": ["components/placeholder.ts"],
+    "/js/components/qrcode-0e4b67354f.js": ["components/qrcode"],
+    "/js/components/advert-064271ed9b.js": ["components/advert"],
+    "/js/components/nav-d9eab6af09.js": ["components/nav"],
+    "/js/components/tips-e2ceadd14d.js": ["components/tips"],
+    "/js/components/guide-8759cd328f.js": ["components/guide"],
+    "/js/components/bbox/bbox-view-df7e8cb3b0.js": ["components/bbox/bbox_view.ts", "components/bbox/bbox_animate.ts"],
+    "/js/components/guide_tips-d9e617f782.js": ["components/guide_tips.ts"],
+    "/js/components/login_guide-4fba3971ce.js": ["components/login_guide.ts"],
+    "/js/components/video-meet-7833028d86.js": ["components/video-meet.ts"],
+    "/amd_modules/@baidu/video-meeting-1be7f62dac.js": ["@baidu/video-meeting/dist/index", "@baidu/video-meeting"],
+    "/amd_modules/@baidu/aging-tools-pc-1e5afe8bdf.js": ["@baidu/aging-tools-pc/dist/index", "@baidu/aging-tools-pc"],
+    "/amd_modules/@baidu/ai-search-box-entry-ea20fec552.js": ["@baidu/ai-search-box-entry/dist/js/index"],
+    "/js/components/aging-tools-13270120c7.js": ["components/aging-tools.ts"],
+    "/amd_modules/tslib-c95383af0c.js": ["tslib", "./tslib/tslib"],
+    "/js/components/invoke-97e9694cb9.js": ["components/invoke.ts"],
+    "/js/news_new/index-20deaf7968.js": ["news_new/init_tts", "news_new/card_alsLog", "news_new/ck", "news_new/index_view", "news_new/index"],
+    "/js/min_tips-3c72b5b27b.js?v=md5": ["log/log", "start/tips_start"],
+    "/js/ubase-dddde7cd4e.js?v=md5": ["superuijs/superui", "superuijs/util/tool", "superuijs/util/emitter",
+        "superuijs/util/dot", "superuijs/util/smDot", "superuijs/component", "superuijs/component/draggable", "superuijs/component/scrollbar", "superuijs/component/dialog", "superuijs/component/tips", "superuijs/component/share", "superuijs/component/share2", "superuijs/component/notify", "superuijs/component/suggestion", "superuijs/component/placeholder"],
+    "/js/ubase_unused-e357fff740.js?v=md5": ["superuijs/component/draggsort", "superuijs/component/draggselect", "superuijs/component/draggdirs"],
+    "/js/utils-ce7201f913.js?v=md5": ["superuijs/util/pubsub"],
+    "/css/super_ext-36b360db2f.css": ["mngr_quit_guid.css"],
+    "/css/components/user_quit_dialog-527f3ede74.css": ["components/user_quit_dialog.css"],
+    "/css/super_min-6f52ab3317.css": ["super_init.css", "skin.css", "super_skin.css", "select.css", "index_guide.css"],
+    "/css/skin/skin_layer-d2120713ac.css": ["skin/skin_layer.css"],
+    "/css/guidetip-b41ed60c8a.css": ["guide.css"],
+    "/css/nsguide-a66438b784.css": ["ns_guide.css"],
+    "/css/setting_min-4dae12391e.css": [
+        "setting.css"],
+    "/css/card_setting-673b2943c1.css": ["card_setting.css"],
+    "/css/page_setting-da9f239ab9.css": ["super_setting.css", "select.css", "setting_msg.css", "setting_yaohao.css", "pop.css", "dialog.css"],
+    "/css/mt_min-88763bc1c9.css": ["mt_mod.css", "index_msg.css"],
+    "/css/pages/index-b0b3304de9.css": ["pages/index.css", "components/qrcode_new.css"],
+    "/css/pages/index_result-3a33835e40.css": ["pages/index_result.css"],
+    "/css/pages/result-7014ae574c.css": ["pages/result.css"],
+    "/css/pages/ps-78c2049dd9.css": ["pages/ps.css", "grid/grid.css"],
+    "/css/weather/weather_new-4aa68cfe53.css": ["weather/weather_new.css", "weather/weather_setting_new.css"],
+    "/css/pages/common-747e4c8a6a.css": ["components/head_wrapper_new.css", "s_top_wrap_new.css", "components/topmenu_new.css", "bottom_layer.css", "components/blind_box.css", "popup_advert.css", "components/guide_info.css", "components/aging_tool.css", "components/gray.css", "components/drag.css"],
+    "/css/components/hotsearch-5008bbbbeb.css": [
+        "components/hotsearch.css"],
+    "/css/components/nav-ffd5baab45.css": ["components/nav.css"],
+    "/css/card_min2-b454fbe89a.css": ["card_menu2.css", "card_side2.css"],
+    "/css/recommand/init-c52228535a.css": ["news_new/init.css", "news_new/waterfall.css", "news_new/custom_sui.css", "news_new/hot_search.css", "news_new/dialog.css"],
+    "/css/ubase_sync-d600f57804.css?v=md5": ["scrollbar_sync.css"],
+    "/css/ubase-89d6b96e41.css?v=md5": ["superui/superui.css", "superui/dialog.css", "superui/tips.css", "superui/share.css",
+        "superui/scrollbar.css", "superui/suggestion.css"],
+    "/css/ubase_sync-d600f57804.css?v=md5": ["superui/scrollbar_sync.css"]
+});
+window._xman_speed = window._xman_speed || {};
+F._setContext({base: "lib/sbase"});
+F.use("lib/mod_evt", function (evt) {
+    F._setContextMethod("fire", function (evtName, evtArgs) {
+        return evt.fire(this.svnMod + ":" + this.modName, evtName, evtArgs)
+    });
+    F._setContextMethod("listen", function (modName, evtName, handler) {
+        var mType = Object.prototype.toString.call(modName);
+        if (mType == "[object String]") {
+            if (
+                modName.indexOf(":") < 0) {
+                modName = this.svnMod + ":" + modName
+            }
+        } else if (mType == "[object Array]") {
+            for (var i = 0, len = modName.length; i < len; i++) {
+                if (modName[i].indexOf(":") < 0) {
+                    modName[i] = this.svnMod + ":" + modName[i]
+                }
+            }
+        }
+        evt.on(modName, evtName, handler)
+    });
+    F._setContextMethod("unListen", function (modName, evtName, handler) {
+        evt.un(this.svnMod + ":" + this.modName, evtName, handler)
+    })
+});
+F._loadScriptTimeout = 15e3;
+F._useConfig = true;
+F._firstScreenCSS = F._firstScreenCSS || [];
+F._firstScreenCSS.push("/css/super_min-6f52ab3317.css")
+;F._firstScreenJS = F._firstScreenJS || [];
+F._firstScreenJS.push("/js/min_super-c4c7be2850.js");</script>
+<script id="s_js_mancard_main" data-src="https://pss.bdstatic.com/static/superman/js/mancard-ca8bfaa734.js">
+    _manCard.asynLoad("s_js_mancard_main");
+</script>
+<script id="s_js_mancard_subscribe" data-src="https://pss.bdstatic.com/static/superman/js/subscribe-d2630c5b22.js">
+    _manCard.asynLoad("s_js_mancard_subscribe");
+</script>
+<script type="text/javascript" src="./百度一下，你就知道_files/min_super-c4c7be2850.js.下载"></script>
+<script>
+    (function () {
+        var skinOff = "\//search-operate.cdn.bcebos.com/e8cbce1d53432a6950071bf26b640e2b.gif",
+            skinOffRe = "\//search-operate.cdn.bcebos.com/e8cbce1d53432a6950071bf26b640e2b.gif",
+            skinOn = "\//search-operate.cdn.bcebos.com/e8cbce1d53432a6950071bf26b640e2b.gif",
+            skinOnRe = "\//search-operate.cdn.bcebos.com/e8cbce1d53432a6950071bf26b640e2b.gif",
+            userSetLogoWrite = "https:\//pss.bdstatic.com/static/superman/img/logo/logo_white-d0c9fe2af5.png",
+            userSetLogoRed = "https:\//pss.bdstatic.com/static/superman/img/logo/logo_redBlue-0a7c20fcaa.png";
+
+        var greatEvent = {};
+        var useSkin = "off";
+
+        if (greatEvent && greatEvent.switch === '1' && useSkin !== 'on') {
+            if (greatEvent.doodleExist === '0' || (greatEvent.doodleExist === '1' && greatEvent.doodleCover === '1')) {
+                var skinOff = '//www.baidu.com/img/flexible/logo/pc/index_gray.png';
+                var skinOffRe = '//www.baidu.com/img/flexible/logo/pc/index_gray.png';
+            }
+        }
+
+
+        if (!skinOn) {
+            skinOn = skinOff;
+            skinOnRe = skinOffRe;
+        }
+        var change = function (src, newsrc) {
+            if ($('#s_lg_img').attr('src') != src) {
+                $('#s_lg_img').attr('src', src);
+                $('#s_lg_img_new').attr('src', newsrc);
+            }
+        }
+
+        var changeResultLogo = function (src, newSrc, peakSrc) {
+            if ($('#result_logo .index-logo-src').attr('src') !== src) {
+                $('#result_logo .index-logo-src').attr('src', src);
+                $('#result_logo .index-logo-srcnew').attr('src', newSrc);
+                $('#result_logo .index-logo-peak').attr('src', peakSrc);
+            }
+        }
+        if (s_session.userSkinName === '') {
+            change(skinOff, skinOffRe);
+        }
+        $(window).on('s-skinoff', function () {
+            change(skinOff, skinOffRe);
+            if (greatEvent && greatEvent.switch === '1' && !$('body').hasClass('big-event-gray')) {
+                $('body').addClass('big-event-gray');
+                if (greatEvent.doodleExist === '0' || (greatEvent.doodleExist === '1' && greatEvent.doodleCover === '1')) {
+                    var hbLogo = "\/\/www.baidu.com\/img\/flexible\/logo\/pc\/index_gray.png";
+                    change(hbLogo, hbLogo);
+                }
+                var hbResultLogo = "\/\/www.baidu.com\/img\/flexible\/logo\/pc\/result_gray.png";
+                changeResultLogo(hbResultLogo, hbResultLogo, hbResultLogo);
+            }
+        });
+
+        var resultLogo = '//www.baidu.com/img/flexible/logo/pc/result.png';
+        var resultNewLogo = '//www.baidu.com/img/flexible/logo/pc/result@2.png';
+        var resultPeakLogo = '//www.baidu.com/img/flexible/logo/pc/peak-result.png';
+
+        $(window).on('s-skinon', function () {
+            var $skinContainer = $('.s-skin-container');
+            // 如果有置灰类名，且用户开启自定义皮肤，去除相关置灰类名
+            if ($('body').hasClass('big-event-gray') && useSkin === 'on') {
+                $('body').removeClass('big-event-gray');
+                $skinContainer.length > 0 && $skinContainer.hasClass('skin-gray-event') && $skinContainer.removeClass('skin-gray-event');
+            }
+            // 如果开启置灰，且用户未使用自定义皮肤，需要将皮肤置灰
+            if (greatEvent && greatEvent.switch === '1' && useSkin !== 'on') {
+                $skinContainer.length > 0 && !$skinContainer.hasClass('skin-gray-event') && $skinContainer.addClass('skin-gray-event');
+            }
+            var LogoColor = $('#head');
+            if (LogoColor.hasClass('red-blue-logo')) {
+                if (s_session.logoCode) {
+                    change(skinOn, skinOnRe);
+                } else {
+                    change(userSetLogoRed, userSetLogoRed);
+                }
+            } else if (LogoColor.hasClass('white-logo')) {
+                var isUpload = s_session.userLogoIsupload === 'false' ? false : s_session.userLogoIsupload;
+                if (!isUpload || s_session.logoCode) {
+                    change(skinOn, skinOnRe);
+                } else {
+                    change(userSetLogoWrite, userSetLogoWrite);
+                }
+            } else {
+                change(skinOff, skinOffRe);
+            }
+            if (greatEvent && greatEvent.switch === '1' && useSkin !== 'on') {
+                var hbResultLogo = "\/\/www.baidu.com\/img\/flexible\/logo\/pc\/result_gray.png";
+                changeResultLogo(hbResultLogo, hbResultLogo, hbResultLogo);
+            } else {
+                changeResultLogo(resultLogo, resultNewLogo, resultPeakLogo);
+            }
+        });
+    })();
+</script>
+<script type="text/javascript" id="s_js_setting"
+        data-src="https://pss.bdstatic.com/static/superman/js/min_setting-c3f73c1e26.js"></script>
+<script>
+    setTimeout(function () {
+        if (document.getElementById("s_main").offsetWidth == 0 && typeof (F) == 'undefined') {
+            new Image().src = s_domain.baseuri + '/page/data/pageserver?errno=2015&msg=cdn_failed'
+        }
+    }, 2000);
+    if (typeof ns_c == "undefined") {
+        var ns_c = function () {
+        }
+    }
+</script>
+<script defer="" src="./百度一下，你就知道_files/cd37ed75a9387c5b.js.下载"></script>
+<script src="./百度一下，你就知道_files/s_super_async-12d728e63f.js.下载"></script>
+<span id="s_strpx_span1"
+      style="visibility:hidden;position:absolute;bottom:0;left:0;font-weight:bold;font-size:12px;font-family:&#39;arial&#39;;">中</span>
+<div id="aging-tools-pc"> <!--75--> <!--76--> </div>
+</body>
+</html>
